@@ -81,7 +81,7 @@ export function ProgramIncludes() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg md:text-2xl font-bold text-[#1A202C] mb-1 md:mb-2">
-                    Active Community of 200+ Students
+                    Active Community of 150+ Students
                   </h3>
                   <p className="text-sm md:text-lg text-[#718096] leading-relaxed mb-3 md:mb-4">
                     Join our thriving community where students support each other 24/7. Share wins, get feedback, ask questions, and network with other Muslim appointment setters worldwide. Weekly live group calls and Q&A sessions included.

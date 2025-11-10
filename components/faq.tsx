@@ -10,7 +10,7 @@ const faqs = [
     id: 1,
     question: "What makes Muslim Settify different from free YouTube training?",
     answer:
-      "Two things: our exclusive job board and active community. We post up to 20 high-quality appointment setting jobs daily that you won't find anywhere else. Plus, our private community of 200+ students provides 24/7 support, weekly coaching calls, and networking opportunities. You're not just learning alone from videos—you're joining a thriving ecosystem that actively helps you land clients and succeed.",
+      "Two things: our exclusive job board and active community. We post up to 20 high-quality appointment setting jobs daily that you won't find anywhere else. Plus, our private community of 150+ students provides 24/7 support, weekly coaching calls, and networking opportunities. You're not just learning alone from videos—you're joining a thriving ecosystem that actively helps you land clients and succeed.",
   },
   {
     id: 2,

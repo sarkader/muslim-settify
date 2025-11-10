@@ -12,7 +12,7 @@ const benefits = [
   },
   {
     icon: Users,
-    title: "Thriving Community of 200+ Earners",
+    title: "Thriving Community of 150+ Earners",
     description: "Connect with like-minded Muslims already earning $3k-$15k monthly. Share wins, get feedback, and learn from students at all stages of their journey.",
     stat: "24/7 active support",
   },
@@ -66,7 +66,7 @@ export function ExclusiveCommunity() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-[#718096] max-w-3xl mx-auto leading-relaxed"
           >
-            This isn't a course you buy and forget. When you join Muslim Settify, you're joining a tight-knit community of 200+ Muslims earning real income, with exclusive job opportunities posted daily.
+            This isn't a course you buy and forget. When you join Muslim Settify, you're joining a tight-knit community of 150+ Muslims earning real income, with exclusive job opportunities posted daily.
           </motion.p>
         </div>
 
@@ -187,9 +187,9 @@ export function ExclusiveCommunity() {
               className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto"
             >
               {[
-                { label: "Students Making Hijrah", value: "45+" },
-                { label: "Working from Islamic Countries", value: "80+" },
-                { label: "Location Independent", value: "100%" },
+                { label: "Students Preparing for Hijrah", value: "15+" },
+                { label: "Members Working from Islamic Countries", value: "35+" },
+                { label: "Location Independent Roles", value: "90%" },
               ].map((stat, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-3 md:p-4 lg:p-6 border border-white/20">
                   <div className="text-xl md:text-2xl lg:text-3xl font-bold mb-1 md:mb-2">{stat.value}</div>

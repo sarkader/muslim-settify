@@ -31,6 +31,8 @@ const testimonials = [
 ];
 
 export function Testimonials() {
+  const carouselTestimonials = [...testimonials, ...testimonials];
+
   return (
     <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -55,59 +57,54 @@ export function Testimonials() {
           </motion.p>
         </div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
-          {testimonials.map((testimonial) => (
-            <motion.div
-              key={testimonial.name}
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    duration: 0.6,
-                    ease: "easeOut",
-                  },
-                },
-              }}
-              className="bg-[#F7FAFC] p-8 rounded-xl border border-gray-100"
-            >
-              <Quote className="h-8 w-8 text-[#0066FF]/30 mb-4" />
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-[#00D4AA] text-[#00D4AA]" />
-                ))}
-              </div>
-              <p className="text-[#718096] mb-6 leading-relaxed italic">
-                "{testimonial.text}"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#0066FF]/10 flex items-center justify-center text-[#0066FF] font-semibold">
-                  {testimonial.image}
+        <div className="relative overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="pointer-events-none absolute left-0 top-0 h-full w-16 sm:w-24 bg-gradient-to-r from-white via-white/90 to-transparent z-20"
+          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="pointer-events-none absolute right-0 top-0 h-full w-16 sm:w-24 bg-gradient-to-l from-white via-white/90 to-transparent z-20"
+          />
+          <motion.div
+            className="flex gap-4 sm:gap-6"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+          >
+            {carouselTestimonials.map((testimonial, index) => (
+              <div
+                key={`${testimonial.name}-${index}`}
+                className="bg-[#F7FAFC] min-w-[260px] sm:min-w-[320px] lg:min-w-[360px] p-6 sm:p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow duration-300"
+              >
+                <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-[#0066FF]/30 mb-4" />
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-[#00D4AA] text-[#00D4AA]" />
+                  ))}
                 </div>
-                <div>
-                  <div className="font-semibold text-[#1A202C]">{testimonial.name}</div>
-                  <div className="text-sm text-[#718096]">{testimonial.role}</div>
-                  <div className="text-sm font-medium text-[#00D4AA]">{testimonial.income}</div>
+                <p className="text-sm sm:text-base text-[#718096] mb-6 leading-relaxed italic">
+                  "{testimonial.text}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#0066FF]/10 flex items-center justify-center text-[#0066FF] font-semibold">
+                    {testimonial.image}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-[#1A202C]">{testimonial.name}</div>
+                    <div className="text-xs sm:text-sm text-[#718096]">{testimonial.role}</div>
+                    <div className="text-xs sm:text-sm font-medium text-[#00D4AA]">{testimonial.income}</div>
+                  </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );

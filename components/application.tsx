@@ -67,7 +67,7 @@ export function Application() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="text-lg text-[#718096]"
           >
-            Apply for a free strategy call to see if you're a good fit for the program
+            Fill out the quick application below and we’ll reach out about enrollment next steps.
           </motion.p>
         </div>
 
@@ -193,10 +193,10 @@ export function Application() {
               )}
 
               <h3 className="text-2xl font-bold text-[#1A202C] mb-2">
-                Apply for Your Free Strategy Call
+                Apply to Join Muslim Settify
               </h3>
               <p className="text-sm text-[#718096] mb-8">
-                We'll review your application and contact you within 24 hours
+                Submit the form and our team will guide you through enrollment within 24 hours.
               </p>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">

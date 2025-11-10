@@ -25,7 +25,7 @@ export function ApplyCTA() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="text-lg text-[#718096] mb-8"
         >
-          Apply now for a free strategy call to see if you're a good fit
+          Submit your application and we’ll guide you through joining the next cohort
         </motion.p>
 
         <motion.div
@@ -40,12 +40,12 @@ export function ApplyCTA() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 md:gap-3 bg-[#0066FF] hover:bg-[#0052CC] text-white font-bold text-sm md:text-lg px-6 md:px-[60px] py-3 md:py-5 rounded-xl shadow-[0_6px_20px_rgba(0,102,255,0.35)] hover:shadow-[0_8px_24px_rgba(0,102,255,0.4)] hover:-translate-y-1 transition-all duration-200 group"
           >
-            Apply Now - Free Strategy Call
+            Apply Now
             <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
           </a>
 
           <p className="text-sm text-[#718096] mt-6">
-            No credit card required • Free consultation
+            No credit card required • We respond within 24 hours
           </p>
         </motion.div>
       </div>
