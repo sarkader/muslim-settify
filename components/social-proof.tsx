@@ -6,52 +6,52 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     id: 1,
-    name: "Aqib R.",
+    name: "Aqib",
     location: "United Kingdom",
-    initials: "AR",
+    initials: "AQ",
     color: "from-[#0066FF] to-[#0052CC]",
-    quote: "Got kicked out of my job in February. By June I had made $30k. Now I've done $60k total in earnings from setting and closing.",
-    result: "$60k+ Total",
+    summary: "High-ticket setter working across multiple offers after leaving his job.",
+    earnings: "$60k+ collected",
     highlight: false,
   },
   {
     id: 2,
-    name: "Melih K.",
-    location: "Turkey & abroad",
-    initials: "MK",
+    name: "Melih",
+    location: "Turkey & UAE",
+    initials: "ME",
     color: "from-[#00D4AA] to-[#00B894]",
-    quote: "Sold my belongings to join. Landed first role with 300k follower influencer. Now earning thousands monthly while traveling freely.",
-    result: "$2k-$3k monthly + Freedom",
+    summary: "Holds two remote setter roles with Muslim influencers.",
+    earnings: "$2k-$3k monthly OTE",
     highlight: false,
   },
   {
     id: 3,
-    name: "Mohamad H.",
+    name: "Mohamad Hussein",
     location: "Middle East",
     initials: "MH",
     color: "from-[#0066FF] to-[#0052CC]",
-    quote: "Finished all materials in 12 hours. Landed first role after 1 day. Made $1000 in 3 weeks. Now I'm a COO earning $7-8k monthly.",
-    result: "COO • $7-8k/mo",
+    summary: "Moved from setter to COO inside a values-first agency.",
+    earnings: "$7k-$8k monthly",
     highlight: false,
   },
   {
     id: 4,
-    name: "Aeman T.",
+    name: "Aeman",
     location: "Remote",
-    initials: "AT",
+    initials: "AE",
     color: "from-[#00D4AA] to-[#00B894]",
-    quote: "Landed $5k-$8k OTE role with an agency making $350k/month. Made $550 in one day. Staying consistent with disciplined routines.",
-    result: "$5k-$8k OTE remotely",
+    summary: "Relocated while working an agency setter role.",
+    earnings: "$5k-$8k OTE",
     highlight: false,
   },
   {
     id: 5,
-    name: "Khalid A.",
-    location: "Remote",
-    initials: "KA",
+    name: "Hosaam",
+    location: "Saudi Arabia",
+    initials: "HO",
     color: "from-[#0066FF] to-[#0052CC]",
-    quote: "Had no stable income when I joined. Set a $25k deal for Buildfst. Now executive assistant with base salary.",
-    result: "Base Salary + Commission",
+    summary: "Balanced two setter roles shortly after joining.",
+    earnings: "~$2.3k earned in 37 days",
     highlight: false,
   },
   {
@@ -60,8 +60,8 @@ const testimonials = [
     location: "Southeast Asia",
     initials: "MA",
     color: "from-[#00D4AA] to-[#00B894]",
-    quote: "Got first role 6 days after joining. Made $4k total. Now making good money while doing the things I like.",
-    result: "$4k+ earned",
+    summary: "Consistently booking meetings for remote clients.",
+    earnings: "~$7k-$8k total collected",
     highlight: false,
   },
   {
@@ -70,18 +70,18 @@ const testimonials = [
     location: "Middle East",
     initials: "AR",
     color: "from-[#0066FF] to-[#0052CC]",
-    quote: "Landed role with big influencer 6 days after joining. Now earning 4-figure base salary plus commission.",
-    result: "4-figure base + commission",
+    summary: "Earns a base salary plus commission in his setter role.",
+    earnings: "4-figure monthly income",
     highlight: false,
   },
   {
     id: 8,
     name: "Muntasir",
-    location: "Remote",
+    location: "Singapore",
     initials: "MU",
     color: "from-[#00D4AA] to-[#00B894]",
-    quote: "Watched the training one day. Two days later, collected $700 payment via Stripe. Fastest result in the program.",
-    result: "$700 in 3 days",
+    summary: "Closed his first paid deal only days after onboarding.",
+    earnings: "$700 in 3 days",
     highlight: true,
   },
   {
@@ -90,8 +90,8 @@ const testimonials = [
     location: "Bangladesh",
     initials: "SH",
     color: "from-[#0066FF] to-[#0052CC]",
-    quote: "Never worked in high ticket sales before. Lives in Bangladesh. Made $2.1k working remotely. If I can do it, why can't you?",
-    result: "$2.1k from Bangladesh",
+    summary: "Started with zero high-ticket sales experience.",
+    earnings: "$2.1k earned remotely",
     highlight: false,
   },
 ];
@@ -183,7 +183,7 @@ export function SocialProof() {
 
               {/* Quote */}
               <p className="text-xs md:text-sm lg:text-base text-[#2D3748] leading-tight md:leading-relaxed mb-2 md:mb-3 lg:mb-4 flex-1">
-                "{testimonial.quote}"
+                {testimonial.summary}
               </p>
 
               {/* Result Badge */}
@@ -195,7 +195,7 @@ export function SocialProof() {
                 }`}
               >
                 <TrendingUp className="h-2.5 w-2.5 md:h-3 md:w-3 lg:h-3.5 lg:w-3.5" />
-                <span className="truncate">💰 {testimonial.result}</span>
+                <span className="truncate">💰 {testimonial.earnings}</span>
               </div>
             </motion.div>
           ))}
