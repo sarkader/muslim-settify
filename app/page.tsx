@@ -7,6 +7,7 @@ import { FAQ } from "@/components/faq";
 import { ApplyCTA } from "@/components/apply-cta";
 import { Footer } from "@/components/footer";
 import { WorldMapSection } from "@/components/world-map-section";
+import { Case } from "@/components/ui/cases-with-infinite-scroll";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <VideoTestimonials />
+      <Case />
       <CombinedOverview />
       <WorldMapSection />
       <SocialProof />
