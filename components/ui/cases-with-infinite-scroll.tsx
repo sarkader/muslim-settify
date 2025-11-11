@@ -16,18 +16,21 @@ type Logo = {
 };
 
 const logos: Logo[] = [
-  { name: "Noor Studios", image: "/ico/1b.jpg" },
-  { name: "Atlas Ventures", image: "/ico/1b.jpg" },
-  { name: "Saffron & Co.", image: "/ico/1b.jpg" },
-  { name: "Blue Crescent", image: "/ico/1b.jpg" },
-  { name: "Evergreen Labs", image: "/ico/1b.jpg" },
-  { name: "Horizon Media", image: "/ico/1b.jpg" },
-  { name: "Marhaba Digital", image: "/ico/1b.jpg" },
-  { name: "Unity Agency", image: "/ico/1b.jpg" },
-  { name: "Summit Partners", image: "/ico/1b.jpg" },
-  { name: "Falcon Group", image: "/ico/1b.jpg" },
-  { name: "Founders Collective", image: "/ico/1b.jpg" },
-  { name: "Cedar Labs", image: "/ico/1b.jpg" },
+  { name: "Z Circle", image: "/icon/trial.png" },
+  { name: "B38 36", image: "/icon/b38.36.png" },
+  { name: "B37 59", image: "/icon/b37.59.png" },
+  { name: "B37 49", image: "/icon/b37.49.png" },
+  { name: "B38 26", image: "/icon/b38.26.png" },
+  { name: "B37 16", image: "/icon/b37.16.png" },
+  { name: "B37 30", image: "/icon/b37.30.png" },
+  { name: "B37 24", image: "/icon/b37.24.png" },
+  { name: "B36 58", image: "/icon/b36.58.png" },
+  { name: "B37 08", image: "/icon/b37.08.png" },
+  { name: "B37 40", image: "/icon/b37.40.png" },
+  { name: "B38 06", image: "/icon/b38.06.png" },
+  { name: "B38 13", image: "/icon/b38.13.png" },
+  { name: "Case Study 12", image: "/log/12.jpg" },
+  { name: "Case Study 13", image: "/log/13.png" },
 ];
 
 const CYCLE_DELAY = 2000;
