@@ -1,7 +1,8 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
-import { CombinedOverview } from "@/components/combined-overview";
 import { VideoTestimonials } from "@/components/video-testimonials";
+import { Case } from "@/components/ui/cases-with-infinite-scroll";
+import { CombinedOverview } from "@/components/combined-overview";
 import { SocialProof } from "@/components/social-proof";
 import { FAQ } from "@/components/faq";
 import { ApplyCTA } from "@/components/apply-cta";
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <VideoTestimonials />
+      <Case />
       <CombinedOverview />
       <WorldMapSection />
       <SocialProof />
