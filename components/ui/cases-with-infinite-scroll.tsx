@@ -79,13 +79,13 @@ export function Case() {
                   key={`${logo.name}-${index}`}
                   className="basis-1/3 sm:basis-1/4 lg:basis-1/6"
                 >
-                  <div className="flex aspect-square items-center justify-center rounded-xl border border-[#E2E8F0] bg-[#F7FAFC] p-4">
+                  <div className="aspect-square overflow-hidden rounded-xl border border-[#E2E8F0] bg-[#F7FAFC]">
                     <Image
                       src={logo.image}
                       alt={logo.name}
-                      width={96}
-                      height={96}
-                      className="h-16 w-16 object-contain"
+                      width={160}
+                      height={160}
+                      className="h-full w-full object-cover"
                     />
                   </div>
                 </CarouselItem>
