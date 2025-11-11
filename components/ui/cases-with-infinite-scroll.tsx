@@ -16,66 +16,18 @@ type Logo = {
 };
 
 const logos: Logo[] = [
-  {
-    name: "Noor Studios",
-    image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=160&q=80",
-  },
-  {
-    name: "Atlas Ventures",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=160&q=80",
-  },
-  {
-    name: "Saffron & Co.",
-    image:
-      "https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?auto=format&fit=crop&w=160&q=80",
-  },
-  {
-    name: "Blue Crescent",
-    image:
-      "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=160&q=80",
-  },
-  {
-    name: "Evergreen Labs",
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=160&q=80",
-  },
-  {
-    name: "Horizon Media",
-    image:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=160&q=80",
-  },
-  {
-    name: "Marhaba Digital",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=160&q=80",
-  },
-  {
-    name: "Unity Agency",
-    image:
-      "https://images.unsplash.com/photo-1485217988980-11786ced9454?auto=format&fit=crop&w=160&q=80",
-  },
-  {
-    name: "Summit Partners",
-    image:
-      "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=160&q=80",
-  },
-  {
-    name: "Falcon Group",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=160&q=80",
-  },
-  {
-    name: "Founders Collective",
-    image:
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=160&q=80",
-  },
-  {
-    name: "Cedar Labs",
-    image:
-      "https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=160&q=80",
-  },
+  { name: "Noor Studios", image: "/ico/1b.jpg" },
+  { name: "Atlas Ventures", image: "/ico/1b.jpg" },
+  { name: "Saffron & Co.", image: "/ico/1b.jpg" },
+  { name: "Blue Crescent", image: "/ico/1b.jpg" },
+  { name: "Evergreen Labs", image: "/ico/1b.jpg" },
+  { name: "Horizon Media", image: "/ico/1b.jpg" },
+  { name: "Marhaba Digital", image: "/ico/1b.jpg" },
+  { name: "Unity Agency", image: "/ico/1b.jpg" },
+  { name: "Summit Partners", image: "/ico/1b.jpg" },
+  { name: "Falcon Group", image: "/ico/1b.jpg" },
+  { name: "Founders Collective", image: "/ico/1b.jpg" },
+  { name: "Cedar Labs", image: "/ico/1b.jpg" },
 ];
 
 const CYCLE_DELAY = 2000;
