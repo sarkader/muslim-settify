@@ -6,27 +6,27 @@ import { Briefcase, Users, MessageCircle, TrendingUp, MapPin, Lock, Sparkles } f
 const benefits = [
   {
     icon: Briefcase,
-    title: "Daily Remote Job Leads",
-    description: "Exclusive access to appointment setting roles you won't find anywhere else. Muslim influencers, coaches, and high-ticket businesses actively hiring members of our community.",
-    stat: "Fresh roles every week",
+    title: "Hundreds of Roles Available",
+    description: "Exclusive access to vetted appointment setting roles from values-aligned businesses actively hiring our students.",
+    stat: "New roles shared daily",
   },
   {
     icon: Users,
-    title: "Thriving Community of Dedicated Earners",
-    description: "Connect with like-minded Muslims earning remote income. Share wins, get feedback, and learn from students at all stages of their journey.",
-    stat: "Supportive peer network",
+    title: "Community of 150+ Students",
+    description: "Connect with peers striving for excellence, accountability, and adab while learning together.",
+    stat: "24/7 peer support",
   },
   {
     icon: TrendingUp,
-    title: "Fast-Track Your Success",
-    description: "Get your questions answered instantly, join weekly live calls, and receive 1-on-1 mentorship. No waiting, no guesswork—just proven strategies.",
+    title: "Guided Mentorship",
+    description: "Get your questions answered quickly, join weekly live calls, and receive feedback that keeps you progressing.",
     stat: "Weekly live coaching",
   },
   {
     icon: MapPin,
-    title: "Perfect for Hijrah & Remote Work",
-    description: "Earn from anywhere—Madinah, UAE, Turkey, or wherever Allah calls you. Many students work remotely while making hijrah to Islamic countries.",
-    stat: "Built for remote freedom",
+    title: "Remote-Friendly Workflow",
+    description: "Serve clients globally while staying rooted in your principles and responsibilities at home.",
+    stat: "Designed for flexible schedules",
   },
 ];
 
@@ -66,7 +66,7 @@ export function ExclusiveCommunity() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-[#718096] max-w-3xl mx-auto leading-relaxed"
           >
-            This isn't a course you buy and forget. When you join Muslim Settify, you're joining a tight-knit community of Muslims earning real income, with exclusive job opportunities posted consistently.
+            This isn't a course you buy and forget. When you join Muslim Settify, you're joining a tight-knit community of 150+ students building dependable skills with accountability and job opportunities each week.
           </motion.p>
         </div>
 
@@ -129,77 +129,6 @@ export function ExclusiveCommunity() {
           })}
         </motion.div>
 
-        {/* HIJRAH FOCUS SECTION */}
-        <motion.div
-          initial={{ opacity: 1, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative overflow-hidden bg-gradient-to-br from-[#0066FF] to-[#0052CC] rounded-2xl p-6 md:p-8 lg:p-12 text-white"
-        >
-          {/* Decorative pattern overlay */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full -mr-32 -mt-32"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mb-48"></div>
-          </div>
-
-          {/* Content */}
-          <div className="relative max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 1, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="flex items-center justify-center gap-2 md:gap-3 mb-4 md:mb-6"
-            >
-              <MapPin className="w-5 h-5 md:w-8 md:h-8" />
-              <span className="text-sm md:text-lg font-bold uppercase tracking-wide">
-                Perfect for Hijrah
-              </span>
-            </motion.div>
-
-            <motion.h3
-              initial={{ opacity: 1, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4"
-            >
-              Make Hijrah While Earning $3k-$15k Monthly
-            </motion.h3>
-
-            <motion.p
-              initial={{ opacity: 1, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-sm md:text-lg lg:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed"
-            >
-              Work from Madinah, UAE, Turkey, or any Islamic country while building halal income. No visa restrictions, no location limits—just pure remote freedom to serve Allah and earn with dignity.
-            </motion.p>
-
-            {/* Stats Grid */}
-            <motion.div
-              initial={{ opacity: 1, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto"
-            >
-              {[
-                { label: "Students Preparing for Hijrah", value: "Real success journeys" },
-                { label: "Members Working from Islamic Countries", value: "Global community" },
-                { label: "Location Independent Roles", value: "Remote-first pathways" },
-              ].map((stat, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-3 md:p-4 lg:p-6 border border-white/20">
-                  <div className="text-xl md:text-2xl lg:text-3xl font-bold mb-1 md:mb-2">{stat.value}</div>
-                  <div className="text-[10px] md:text-xs lg:text-sm text-white/80">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </motion.div>
-
         {/* COMMUNITY TESTIMONIAL */}
         <motion.div
           initial={{ opacity: 1, y: 30 }}
@@ -215,12 +144,12 @@ export function ExclusiveCommunity() {
               </div>
               <div>
                 <div className="font-bold text-lg text-[#1A202C] mb-1">Aeman Teter</div>
-                <div className="text-sm text-[#718096]">Made Hijrah to Madinah</div>
+                <div className="text-sm text-[#718096]">Remote Setter & Coach</div>
               </div>
             </div>
             
             <p className="text-lg text-[#1A202C] leading-relaxed mb-6 italic">
-              "I landed a $5k-$8k OTE role, made $550 in one day, and now I'm living in Madinah while working remotely. The community helped me every step of the way. This is what halal income freedom looks like."
+              "I landed a $5k-$8k OTE role, booked consistent meetings each week, and stayed disciplined by checking in with the community. The guidance kept me focused on what matters."
             </p>
 
             <div className="flex items-center gap-6 text-sm">
@@ -228,7 +157,7 @@ export function ExclusiveCommunity() {
                 <div className="w-8 h-8 rounded-full bg-[#00D4AA]/20 flex items-center justify-center">
                   <MapPin className="w-4 h-4 text-[#00D4AA]" />
                 </div>
-                <span className="font-semibold text-[#1A202C]">Living in Madinah</span>
+                <span className="font-semibold text-[#1A202C]">Working from home</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-[#0066FF]/20 flex items-center justify-center">

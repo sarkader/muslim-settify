@@ -10,55 +10,49 @@ const faqs = [
     id: 1,
     question: "What makes Muslim Settify different from free YouTube training?",
     answer:
-      "Two things: our exclusive job board and active community. We post up to 20 high-quality appointment setting jobs daily that you won't find anywhere else. Plus, our private community of 150+ students provides 24/7 support, weekly coaching calls, and networking opportunities. You're not just learning alone from videos—you're joining a thriving ecosystem that actively helps you land clients and succeed.",
+      "Two things: our exclusive job board and active community. We curate hundreds of roles for our students and maintain a private community of 150+ members offering 24/7 support, weekly coaching calls, and networking opportunities. You're not learning alone from videos—you have structured accountability and direct guidance.",
   },
   {
     id: 2,
-    question: "Can I work from any country? Is this good for hijrah?",
+    question: "Do I need prior sales experience?",
     answer:
-      "Absolutely. This is perfect for those making hijrah to Madinah, UAE, Turkey, or other Islamic countries. All you need is an internet connection. Many of our students work remotely while living in Islamic countries, earning $3k-$15k monthly from anywhere in the world. It's location-independent income that supports your religious journey.",
+      "No. The program is designed for complete beginners and includes comprehensive training on all aspects of appointment setting, from initial outreach to advanced follow-up. Many of our most consistent students started with zero sales background.",
   },
   {
     id: 3,
-    question: "Do I need prior sales experience?",
-    answer:
-      "No. The program is designed for complete beginners and includes comprehensive training on all aspects of appointment setting, from initial outreach to advanced closing techniques. Many of our most successful students had zero sales experience before joining.",
-  },
-  {
-    id: 4,
     question: "How much time do I need to dedicate weekly?",
     answer:
       "During the 8-week training, expect 10-15 hours per week including live sessions, practice, and assignments. Once working, most setters dedicate 20-30 hours per week, though this is flexible based on your income goals and availability.",
   },
   {
-    id: 5,
+    id: 4,
     question: "What if my English isn't perfect?",
     answer:
-      "Clear communication is important, but native-level fluency is not required. We provide comprehensive scripts and templates, and many successful setters are non-native English speakers. Minor accent or grammar issues rarely affect results.",
+      "Clear communication is important, but native-level fluency is not required. We provide scripts and templates, and many successful setters are non-native English speakers. Minor accent or grammar issues rarely affect results.",
   },
   {
-    id: 6,
+    id: 5,
     question: "Can I do this while working full-time?",
     answer:
       "Absolutely. Many students complete the training while employed full-time. Live sessions are recorded for flexibility, and the remote nature of appointment setting allows you to work around your existing schedule.",
   },
   {
-    id: 7,
+    id: 6,
     question: "How long until I start earning?",
     answer:
-      "Most students land their first client within 4-8 weeks of completing the program. Initial earnings vary, but the average student reaches $3k-5k monthly within their first 3 months, with many scaling beyond $10k as they gain experience.",
+      "Many students land their first client within 4-8 weeks of completing the program, though timelines vary based on effort and consistency. Results vary.",
+  },
+  {
+    id: 7,
+    question: "Do you help me find clients?",
+    answer:
+      "Yes. The program includes career support such as resume review, outreach templates, interview preparation, and access to our exclusive job board featuring businesses actively seeking setters.",
   },
   {
     id: 8,
-    question: "Do you help me find clients?",
-    answer:
-      "Yes. The program includes comprehensive job placement support including resume review, client outreach templates, interview preparation, and access to our exclusive job board featuring businesses actively seeking setters.",
-  },
-  {
-    id: 9,
     question: "What kind of support do I get after completing the program?",
     answer:
-      "You'll receive lifetime access to all course materials, ongoing community support through our private community, monthly alumni Q&A sessions, and continued access to our exclusive job board with up to 20 new jobs posted daily. You're never left on your own.",
+      "You'll receive lifetime access to all course materials, ongoing community support through our private group, monthly alumni Q&A sessions, and continued access to our exclusive job board with hundreds of roles available over time. You're never left on your own.",
   },
 ];
 

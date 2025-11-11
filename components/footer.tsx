@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, MessageCircle, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
+import { Mail, MessageCircle, Instagram, Youtube } from "lucide-react";
 
 export function Footer() {
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -22,7 +22,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <h3 className="text-xl font-bold mb-4">Muslim Settify</h3>
             <p className="text-sm text-[#A0AEC0] leading-relaxed max-w-[300px]">
-              Empowering Muslims worldwide to build sustainable, halal income through ethical appointment setting.
+              Empowering Muslims worldwide to build sustainable, values-first careers through ethical appointment setting.
             </p>
           </div>
 
@@ -123,7 +123,7 @@ export function Footer() {
             {/* Social Media */}
             <div className="flex items-center gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/jamilkarabaev?igsh=MWVybXh5bzJhbzBvMw=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#A0AEC0] hover:text-white transition-colors duration-200"
@@ -132,31 +132,13 @@ export function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@Jamilb2b"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#A0AEC0] hover:text-white transition-colors duration-200"
                 aria-label="YouTube"
               >
                 <Youtube className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#A0AEC0] hover:text-white transition-colors duration-200"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#A0AEC0] hover:text-white transition-colors duration-200"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>

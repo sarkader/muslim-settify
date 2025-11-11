@@ -28,8 +28,7 @@ export function WorldMapDemo() {
         <p className="mx-auto max-w-2xl py-4 text-sm text-neutral-500 md:text-lg">
           Collaborate with diligent seekers of knowledge who uphold the Sunnah.
           Master remote skills that let you provide for your household, support
-          your teachers, and pursue hijrah without compromising your creed or
-          conduct.
+          your teachers, and stay firm upon the creed and conduct of the Salaf.
         </p>
       </div>
 

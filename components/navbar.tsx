@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { AnimatedButton } from "@/components/ui/animated-button";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -86,15 +86,12 @@ export function Navbar() {
 
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex justify-end">
-            <a
+            <AnimatedButton
               href="https://form.typeform.com/to/ztBUiWgs?typeform-source=becomeasetter.info"
-              target="_blank"
-              rel="noopener noreferrer"
+              className="px-5 xl:px-6 py-2 xl:py-2.5 text-sm xl:text-base"
             >
-              <Button className="bg-[#0066FF] hover:bg-[#0052CC] text-white font-bold px-5 xl:px-6 py-2 xl:py-2.5 rounded-lg text-sm xl:text-base shadow-[0_2px_8px_rgba(0,102,255,0.2)] transition-all duration-200">
-                Apply Now
-              </Button>
-            </a>
+              Apply Now
+            </AnimatedButton>
           </div>
 
           {/* Mobile menu button */}
@@ -152,15 +149,12 @@ export function Navbar() {
               FAQ
             </Link>
             <div className="pt-4">
-              <a
+              <AnimatedButton
                 href="https://form.typeform.com/to/ztBUiWgs?typeform-source=becomeasetter.info"
-                target="_blank"
-                rel="noopener noreferrer"
+                className="w-full py-3 text-base"
               >
-                <Button className="w-full bg-[#0066FF] hover:bg-[#0052CC] text-white font-bold py-3 rounded-lg text-base shadow-[0_2px_8px_rgba(0,102,255,0.2)]">
-                  Apply Now
-                </Button>
-              </a>
+                Apply Now
+              </AnimatedButton>
             </div>
           </div>
         </div>

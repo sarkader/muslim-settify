@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
 
 const testimonials = [
@@ -15,7 +15,7 @@ const testimonials = [
   {
     name: "Fatima Ali",
     role: "Remote Scheduler",
-    location: "Dubai, UAE",
+    location: "Dubai, Gulf Region",
     income: "$9,800/month",
     image: "FA",
     text: "As a mother of three, flexibility was crucial. Muslim Settify taught me how to build a real business from home. I'm so grateful for this opportunity.",
@@ -31,82 +31,133 @@ const testimonials = [
 ];
 
 export function Testimonials() {
-  const carouselTestimonials = [...testimonials, ...testimonials];
+  const prefersReduced = useReducedMotion();
+  const midpoint = Math.ceil(testimonials.length / 2);
+  const row1 = testimonials.slice(0, midpoint);
+  const row2 = testimonials.slice(midpoint);
+
+  const loopRow1 = prefersReduced ? row1 : [...row1, ...row1];
+  const loopRow2 = prefersReduced ? row2 : [...row2, ...row2];
 
   return (
-    <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section
+      id="testimonials"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl font-bold text-[#1A202C] mb-4"
-          >
-            Success Stories
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            className="text-xl text-[#718096] max-w-2xl mx-auto"
-          >
-            Real results from Muslims around the world
-          </motion.p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#1A202C] mb-4">
+            See What Students Are Building
+          </h2>
+          <p className="text-xl text-[#718096] max-w-2xl mx-auto">
+            Real results from students around the world
+          </p>
         </div>
 
-        <div className="relative overflow-hidden">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="pointer-events-none absolute left-0 top-0 h-full w-16 sm:w-24 bg-gradient-to-r from-white via-white/90 to-transparent z-20"
-          />
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="pointer-events-none absolute right-0 top-0 h-full w-16 sm:w-24 bg-gradient-to-l from-white via-white/90 to-transparent z-20"
-          />
-          <motion.div
-            className="flex gap-4 sm:gap-6"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 30, ease: "linear", repeat: Infinity }}
-          >
-            {carouselTestimonials.map((testimonial, index) => (
-              <div
-                key={`${testimonial.name}-${index}`}
-                className="bg-[#F7FAFC] min-w-[260px] sm:min-w-[320px] lg:min-w-[360px] p-6 sm:p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow duration-300"
-              >
-                <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-[#0066FF]/30 mb-4" />
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-[#00D4AA] text-[#00D4AA]" />
-                  ))}
-                </div>
-                <p className="text-sm sm:text-base text-[#718096] mb-6 leading-relaxed italic">
-                  "{testimonial.text}"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#0066FF]/10 flex items-center justify-center text-[#0066FF] font-semibold">
-                    {testimonial.image}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-[#1A202C]">{testimonial.name}</div>
-                    <div className="text-xs sm:text-sm text-[#718096]">{testimonial.role}</div>
-                    <div className="text-xs sm:text-sm font-medium text-[#00D4AA]">{testimonial.income}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </motion.div>
+        <div className="relative mb-6 overflow-hidden">
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-16 sm:w-24 bg-gradient-to-r from-white via-white/90 to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-16 sm:w-24 bg-gradient-to-l from-white via-white/90 to-transparent z-10" />
+
+          {prefersReduced ? (
+            <div className="flex gap-4 sm:gap-6">
+              {loopRow1.map((testimonial, index) => (
+                <TestimonialCard
+                  key={`row1-static-${index}`}
+                  testimonial={testimonial}
+                />
+              ))}
+            </div>
+          ) : (
+            <motion.div
+              className="flex gap-4 sm:gap-6"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{ duration: 40, ease: "linear", repeat: Infinity }}
+            >
+              {loopRow1.map((testimonial, index) => (
+                <TestimonialCard
+                  key={`row1-${index}`}
+                  testimonial={testimonial}
+                />
+              ))}
+            </motion.div>
+          )}
         </div>
+
+        {row2.length > 0 && (
+          <div className="relative overflow-hidden">
+            <div className="pointer-events-none absolute left-0 top-0 h-full w-16 sm:w-24 bg-gradient-to-r from-white via-white/90 to-transparent z-10" />
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-16 sm:w-24 bg-gradient-to-l from-white via-white/90 to-transparent z-10" />
+
+            {prefersReduced ? (
+              <div className="flex gap-4 sm:gap-6">
+                {loopRow2.map((testimonial, index) => (
+                  <TestimonialCard
+                    key={`row2-static-${index}`}
+                    testimonial={testimonial}
+                  />
+                ))}
+              </div>
+            ) : (
+              <motion.div
+                className="flex gap-4 sm:gap-6"
+                animate={{ x: ["-50%", "0%"] }}
+                transition={{ duration: 40, ease: "linear", repeat: Infinity }}
+              >
+                {loopRow2.map((testimonial, index) => (
+                  <TestimonialCard
+                    key={`row2-${index}`}
+                    testimonial={testimonial}
+                  />
+                ))}
+              </motion.div>
+            )}
+          </div>
+        )}
+
+        <p className="text-center text-sm text-[#718096] mt-8">
+          Results vary. No guarantees.
+        </p>
       </div>
     </section>
+  );
+}
+
+function TestimonialCard({
+  testimonial,
+}: {
+  testimonial: (typeof testimonials)[number];
+}) {
+  return (
+    <div className="bg-[#F7FAFC] min-w-[260px] sm:min-w-[320px] lg:min-w-[360px] p-6 sm:p-8 rounded-xl border border-gray-100 shadow-sm flex-shrink-0">
+      <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-[#0066FF]/30 mb-4" />
+      <div className="flex gap-1 mb-4">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star
+            key={i}
+            className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-[#00D4AA] text-[#00D4AA]"
+          />
+        ))}
+      </div>
+      <p className="text-sm sm:text-base text-[#718096] mb-6 leading-relaxed italic">
+        "{testimonial.text}"
+      </p>
+      <div className="flex items-center gap-4">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#0066FF]/10 flex items-center justify-center text-[#0066FF] font-semibold">
+          {testimonial.image}
+        </div>
+        <div>
+          <div className="font-semibold text-[#1A202C]">
+            {testimonial.name}
+          </div>
+          <div className="text-xs sm:text-sm text-[#718096]">
+            {testimonial.role}
+          </div>
+          <div className="text-xs sm:text-sm font-medium text-[#00D4AA]">
+            {testimonial.income}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 

@@ -1,8 +1,14 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Check } from "lucide-react";
-import { motion } from "framer-motion";
+import { Check } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
+
+import {
+  fadeIn,
+  zoomIn,
+  reduced,
+} from "@/components/ui/motion-presets";
+import { AnimatedButton } from "@/components/ui/animated-button";
 
 const benefits = [
   "Complete training program",
@@ -14,34 +20,40 @@ const benefits = [
 ];
 
 export function CTA() {
+  const prefersReduced = useReducedMotion();
+  const Heading = prefersReduced ? reduced : zoomIn;
+  const Paragraph = prefersReduced ? reduced : fadeIn;
+  const Card = prefersReduced ? reduced : zoomIn;
+  const Footer = prefersReduced ? reduced : fadeIn;
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0066FF] to-[#0052CC]">
       <div className="max-w-5xl mx-auto text-center">
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={Heading}
+          initial="hidden"
+          whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-4xl sm:text-5xl font-bold text-white mb-6"
         >
           Ready to Start Your Journey?
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          variants={Paragraph}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
           className="text-xl text-white/90 mb-8 max-w-2xl mx-auto"
         >
-          Join 500+ Muslims who are already building successful remote careers.
-          Start today and transform your income in the next 90 days.
+          Join 150+ students already building disciplined remote careers.
+          Start today and progress at a pace that matches your effort. Results vary.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          variants={Card}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
           className="bg-white rounded-2xl p-6 md:p-8 lg:p-12 mb-8 shadow-2xl"
         >
           <div className="mb-6 md:mb-8">
@@ -60,26 +72,19 @@ export function CTA() {
             ))}
           </div>
 
-          <a
+          <AnimatedButton
             href="https://form.typeform.com/to/ztBUiWgs?typeform-source=becomeasetter.info"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="w-full sm:w-auto text-sm md:text-lg px-6 py-3 md:px-12 md:py-6"
           >
-            <Button
-              size="lg"
-              className="bg-[#0066FF] hover:bg-[#0052CC] text-white text-sm md:text-lg px-6 md:px-12 py-3 md:py-6 rounded-lg group w-full sm:w-auto"
-            >
-              Apply Now
-              <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </a>
+            Apply Now
+          </AnimatedButton>
         </motion.div>
 
         <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={Footer}
+          initial="hidden"
+          whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
           className="text-white/80 text-sm"
         >
           ✓ 30-day money-back guarantee • ✓ Secure payment • ✓ Instant access

@@ -30,7 +30,7 @@ const modules = [
     week: "Week 2-3",
     title: "The Islamic Framework for Ethical Sales",
     description:
-      "Understand Islamic business ethics and how to ensure 100% halal income. Learn to sell with integrity while following Shariah principles.",
+      "Understand Islamic business ethics and how to conduct your work with integrity while following clear principles.",
   },
   {
     week: "Week 3-4",
@@ -283,8 +283,7 @@ export function Curriculum() {
               <Sparkles className="w-8 h-8 text-[#0066FF]" />
             </div>
             <p className="text-lg font-semibold text-[#1A202C]">
-              Most students land their first client within 4-8 weeks of
-              completing the program
+              Many students report landing their first client within 4-8 weeks of completing the program. Results vary.
             </p>
           </div>
         </motion.div>

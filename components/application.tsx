@@ -67,7 +67,7 @@ export function Application() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="text-lg text-[#718096]"
           >
-            Fill out the quick application below and we’ll reach out about enrollment next steps.
+            Apply now, and we’ll review your fit for the program before reaching out.
           </motion.p>
         </div>
 
@@ -105,10 +105,10 @@ export function Application() {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-[#1A202C] mb-1">
-                    Real Job Placement Support
+                    Career Support & Guidance
                   </h4>
                   <p className="text-base text-[#718096] leading-relaxed">
-                    We don't just teach, we help you land clients. Resume, scripts, interviews—all covered.
+                    We don't just teach—we help you land clients with resume reviews, outreach scripts, and interview prep.
                   </p>
                 </div>
               </div>
@@ -119,10 +119,10 @@ export function Application() {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-[#1A202C] mb-1">
-                    100% Halal Income
+                    Values-First Standards
                   </h4>
                   <p className="text-base text-[#718096] leading-relaxed">
-                    Built on Islamic business ethics. Work with legitimate businesses while maintaining permissible income.
+                    Built on Islamic business ethics. Work with legitimate businesses while staying true to clear principles.
                   </p>
                 </div>
               </div>
@@ -136,7 +136,7 @@ export function Application() {
                     Proven Track Record
                   </h4>
                   <p className="text-base text-[#718096] leading-relaxed">
-                    Join 500+ Muslims already earning $5k-$15k monthly as remote appointment setters.
+                    Join 150+ students already building steady income as remote appointment setters.
                   </p>
                 </div>
               </div>
@@ -193,10 +193,10 @@ export function Application() {
               )}
 
               <h3 className="text-2xl font-bold text-[#1A202C] mb-2">
-                Apply to Join Muslim Settify
+                Submit Your Application
               </h3>
               <p className="text-sm text-[#718096] mb-8">
-                Submit the form and our team will guide you through enrollment within 24 hours.
+                We'll review your application and contact you within 24 hours
               </p>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
@@ -315,7 +315,7 @@ export function Application() {
                 {/* Trust Text */}
                 <p className="text-center text-sm text-[#718096] flex items-center justify-center gap-2">
                   <Check className="w-4 h-4 text-[#00D4AA]" />
-                  No credit card required
+                  No credit card required at this stage
                 </p>
               </form>
 
@@ -323,15 +323,15 @@ export function Application() {
               <div className="mt-8 pt-8 border-t border-[#E2E8F0] flex flex-wrap justify-center gap-6 text-sm text-[#718096]">
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4" />
-                  <span>500+ Students</span>
+                  <span>150+ Students</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4" />
-                  <span>87% Placement Rate</span>
+                  <span>Career support & guidance</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
-                  <span>Free Consultation</span>
+                  <span>We’ll contact you within 24 hours</span>
                 </div>
               </div>
             </div>

@@ -1,84 +1,23 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
+
 import {
-  ArrowRight,
-  Check,
-  Sparkles,
-  Briefcase,
-  Volume2,
-  VolumeX,
-} from "lucide-react";
-import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+  fadeIn,
+  rise,
+  zoomIn,
+  reduced,
+} from "@/components/ui/motion-presets";
+import { AnimatedButton } from "@/components/ui/animated-button";
 
 export function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMuted, setIsMuted] = useState(true);
-  const [showOverlay, setShowOverlay] = useState(true);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const attemptPlay = () => {
-      const playPromise = video.play();
-      if (playPromise && playPromise.catch) {
-        playPromise.catch(() => {
-          /* ignore autoplay blocking */
-        });
-      }
-    };
-
-    attemptPlay();
-
-    const handleUserGesture = () => {
-      attemptPlay();
-      window.removeEventListener("pointerdown", handleUserGesture);
-    };
-
-    window.addEventListener("pointerdown", handleUserGesture);
-
-    return () => {
-      window.removeEventListener("pointerdown", handleUserGesture);
-    };
-  }, []);
-
-  const playVideo = () => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const playPromise = video.play();
-    if (playPromise && playPromise.catch) {
-      playPromise.catch(() => {
-        /* ignore */
-      });
-    }
-  };
-
-  const handleUnmute = () => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    video.muted = false;
-    setIsMuted(false);
-    setShowOverlay(false);
-    playVideo();
-  };
-
-  const handleToggleMute = () => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const newMuted = !isMuted;
-    video.muted = newMuted;
-    setIsMuted(newMuted);
-
-    if (!newMuted) {
-      setShowOverlay(false);
-      playVideo();
-    }
-  };
+  const prefersReduced = useReducedMotion();
+  const H = prefersReduced ? reduced : rise;
+  const P = prefersReduced ? reduced : fadeIn;
+  const Card = prefersReduced ? reduced : zoomIn;
+  const Badge = prefersReduced ? reduced : fadeIn;
 
   return (
     <>
@@ -91,45 +30,15 @@ export function Hero() {
           background-size: 200% auto;
           animation: gradient 4s ease infinite;
         }
-        @keyframes softPulse {
-          0% {
-            transform: scale(1);
-            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.25);
-          }
-          50% {
-            transform: scale(1.04);
-            box-shadow: 0 28px 60px rgba(0, 102, 255, 0.4);
-          }
-          100% {
-            transform: scale(1);
-            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.25);
-          }
-        }
-        .soft-pulse {
-          animation: softPulse 2.4s ease-in-out infinite;
-        }
-        @keyframes iconBounce {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          40% {
-            transform: translateY(-6px);
-          }
-          60% {
-            transform: translateY(-2px);
-          }
-        }
-        .icon-bounce {
-          animation: iconBounce 1.6s ease-in-out infinite;
-        }
       `}</style>
-      <section className="relative z-10 flex min-h-[85vh] items-center overflow-hidden py-12 md:min-h-[90vh] md:py-20">
-        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="min-h-[85vh] md:min-h-[90vh] flex items-center py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto w-full">
           {/* CENTERED HEADLINE */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            variants={H}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
             className="text-center mb-6 md:mb-8"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#1A202C] leading-[1.2] mb-4 md:mb-6 max-w-4xl mx-auto">
@@ -139,16 +48,23 @@ export function Hero() {
               </span>
               {" "}Remotely
             </h1>
-            <p className="text-lg sm:text-xl text-[#718096] leading-relaxed max-w-3xl mx-auto">
-              Join 150+ Muslims building halal income from anywhere—perfect for hijrah to Madinah, UAE, or other Islamic countries. Watch this 3-minute video to understand how it works.
-            </p>
+            <motion.p
+              variants={P}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.25 }}
+              className="text-lg sm:text-xl text-[#718096] leading-relaxed max-w-3xl mx-auto"
+            >
+              Join 150+ students learning appointment setting with a values-first approach. Watch this 6-minute video to see how it works.
+            </motion.p>
           </motion.div>
 
           {/* HUGE VIDEO - MAIN FOCAL POINT */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            variants={Card}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
             className="mb-8 md:mb-12"
           >
             <div className="relative">
@@ -160,118 +76,37 @@ export function Hero() {
               </div>
 
               {/* Video container */}
-              <div className="relative w-full max-w-6xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)] border border-[#E2E8F0] bg-black">
-                <video
-                  ref={videoRef}
-                  className="w-full h-full object-cover"
-                  src="/videos/main.mp4"
-                  autoPlay
-                  muted={isMuted}
-                  playsInline
-                  loop
-                  preload="metadata"
-                />
-                {showOverlay && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <button
-                      type="button"
-                      onClick={handleUnmute}
-                      className="soft-pulse flex flex-col items-center justify-center gap-4 rounded-2xl bg-[#0066FF]/90 px-10 py-8 text-white text-center ring-2 ring-white/30 transition focus:outline-none focus-visible:ring-4 focus-visible:ring-white/70"
-                    >
-                      <Volume2 className="icon-bounce w-12 h-12 md:w-16 md:h-16 text-white drop-shadow-lg" />
-                      <div className="space-y-1">
-                        <p className="text-lg md:text-2xl font-semibold uppercase tracking-wide">
-                          Your video is playing
-                        </p>
-                        <p className="text-sm md:text-lg font-bold">
-                          Click to unmute
-                        </p>
-                      </div>
-                    </button>
-                  </div>
-                )}
-                <button
-                  type="button"
-                  onClick={handleToggleMute}
-                  className="absolute bottom-4 right-4 inline-flex items-center justify-center rounded-full bg-white/90 backdrop-blur px-4 py-2 text-[#1A202C] font-semibold shadow-lg hover:bg-white transition"
-                  aria-label={isMuted ? "Unmute video" : "Mute video"}
-                >
-                  {isMuted ? (
-                    <VolumeX className="w-5 h-5" />
-                  ) : (
-                    <Volume2 className="w-5 h-5" />
-                  )}
-                  <span className="ml-2 hidden sm:inline text-sm">
-                    {isMuted ? "Muted" : "Sound on"}
-                  </span>
-                </button>
+              <div className="relative w-full max-w-6xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)] border border-[#E2E8F0]">
+                <iframe
+                  src="https://www.loom.com/embed/b62017a7639543548f22b1b3e5f7392e"
+                  frameBorder="0"
+                  allowFullScreen
+                  className="w-full h-full"
+                  title="What is Appointment Setting"
+                ></iframe>
               </div>
 
               {/* Video caption */}
               <p className="text-center text-sm text-[#718096] mt-4">
-                Watch how Muslim Settify works in under 3 minutes
-              </p>
-            </div>
-          </motion.div>
-
-          {/* JOB BOARD HIGHLIGHT BADGE */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex justify-center mb-6 md:mb-8"
-          >
-            <div className="inline-flex items-center gap-3 bg-white border border-[#0066FF] rounded-full px-6 py-3 shadow-sm">
-              <Briefcase className="w-5 h-5 text-[#0066FF]" />
-              <span className="text-[#1A202C] font-semibold text-base">
-                Up to 20 new jobs posted daily
-              </span>
-            </div>
-          </motion.div>
-
-          {/* OUTCOME BADGE */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="max-w-2xl mx-auto mb-6 md:mb-10"
-          >
-            <div className="bg-white border border-[#E2E8F0] rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8 text-center shadow-sm">
-              <p className="text-xs md:text-sm uppercase tracking-wide text-[#718096] font-semibold mb-3">
-                Proven Outcomes From Our Community
-              </p>
-              <div className="flex items-center justify-center gap-3 md:gap-4 mb-3">
-                <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-[#00D4AA]" />
-                <p className="text-xl md:text-3xl lg:text-4xl font-bold text-[#1A202C]">
-                  Students inside are hitting consistent $10k+ months
-                </p>
-              </div>
-              <p className="text-sm md:text-base text-[#718096]">
-                Backed by 150+ active students sharpening their skills together every week.
+                What is Appointment Setting & How You Earn Money (6 min)
               </p>
             </div>
           </motion.div>
 
           {/* CTA BUTTONS */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            variants={Badge}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
           >
-            <a
+            <AnimatedButton
               href="https://form.typeform.com/to/ztBUiWgs?typeform-source=becomeasetter.info"
-              target="_blank"
-              rel="noopener noreferrer"
+              className="w-full sm:w-auto text-sm md:text-lg"
             >
-              <Button
-                size="lg"
-                className="bg-[#0066FF] hover:bg-[#0052CC] text-white font-bold text-sm md:text-lg px-6 md:px-12 py-3 md:py-6 rounded-xl shadow-[0_6px_20px_rgba(0,102,255,0.3)] hover:shadow-[0_8px_25px_rgba(0,102,255,0.4)] hover:-translate-y-1 transition-all duration-200 group w-full sm:w-auto"
-              >
-                Apply Now
-                <ArrowRight className="ml-2 md:ml-3 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </a>
+              Apply Now
+            </AnimatedButton>
             <Button
               size="lg"
               variant="outline"
@@ -289,14 +124,15 @@ export function Hero() {
 
           {/* TRUST BADGES */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            variants={Badge}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
             className="flex flex-wrap gap-6 justify-center text-sm text-[#718096]"
           >
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-[#00D4AA] flex-shrink-0" />
-              <span>Up to 20 jobs posted daily</span>
+              <span>Hundreds of roles available</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-[#00D4AA] flex-shrink-0" />
@@ -304,7 +140,7 @@ export function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-[#00D4AA] flex-shrink-0" />
-              <span>Faith-first mentorship and accountability</span>
+              <span>Values-first training and mentorship</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-[#00D4AA] flex-shrink-0" />

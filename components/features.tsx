@@ -1,13 +1,28 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Calendar, DollarSign, Clock, Globe, Users, Shield } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
+import {
+  Calendar,
+  DollarSign,
+  Clock,
+  Globe,
+  Users,
+  Shield,
+} from "lucide-react";
+
+import {
+  fadeIn,
+  slideFromLeft,
+  slideFromRight,
+  stagger,
+  reduced,
+} from "@/components/ui/motion-presets";
 
 const features = [
   {
     icon: DollarSign,
     title: "High Earning Potential",
-    description: "Join our students earning $3,000-$15,000 monthly working part-time hours from home.",
+    description: "Follow the roadmap students use to reach $3,000-$15,000 monthly while working from home.",
   },
   {
     icon: Clock,
@@ -31,30 +46,33 @@ const features = [
   },
   {
     icon: Shield,
-    title: "Islamic Principles",
-    description: "Halal business practices that align with Islamic values and ethics.",
+    title: "Values-First Standards",
+    description: "Operate with professional integrity grounded in clear Islamic guidance.",
   },
 ];
 
 export function Features() {
+  const prefersReduced = useReducedMotion();
+  const containerVariants = prefersReduced ? reduced : stagger();
+
   return (
     <section id="features" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 md:mb-16">
           <motion.h2
-            initial={{ opacity: 1, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={prefersReduced ? reduced : slideFromLeft}
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-4xl sm:text-5xl font-bold text-[#1A202C] mb-4"
           >
             Complete Training Program
           </motion.h2>
           <motion.p
-            initial={{ opacity: 1, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+            variants={prefersReduced ? reduced : fadeIn}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
             className="text-xl text-[#718096] max-w-2xl mx-auto"
           >
             Everything you need to start earning - go at your own pace
@@ -62,36 +80,23 @@ export function Features() {
         </div>
 
         <motion.div
+          variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
+          whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            hidden: { opacity: 1 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
           className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8"
         >
-          {features.map((feature) => {
+          {features.map((feature, index) => {
             const Icon = feature.icon;
+            const cardVariants = prefersReduced
+              ? reduced
+              : index % 2 === 0
+                ? slideFromLeft
+                : slideFromRight;
             return (
               <motion.div
                 key={feature.title}
-                variants={{
-                  hidden: { opacity: 1, y: 30 },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      duration: 0.6,
-                      ease: "easeOut",
-                    },
-                  },
-                }}
+                variants={cardVariants}
                 className="p-4 md:p-6 lg:p-8 rounded-xl bg-[#F7FAFC] hover:bg-[#00D4AA]/5 transition-colors border border-transparent hover:border-[#00D4AA]/20 flex flex-col"
               >
                   <div className="w-8 h-8 md:w-12 md:h-12 rounded-lg bg-[#0066FF]/10 flex items-center justify-center mb-2 md:mb-4 flex-shrink-0">
