@@ -98,7 +98,7 @@ const videoTestimonials: VideoTestimonial[] = [
       "July 19 → Made almost $2.1k on his offer where he now works as an executive assistant",
       "August 1 → Made almost $3.5k in total",
       "September → Gets paid a base salary and a commission on a $3k OTE role",
-      "October → OTE is around $5k-$6k and became a COO",
+      "October → OTE is around $7k-$8k and became a COO",
     ],
     result: "COO earning $7-8k/month",
     highlight: false,
