@@ -52,7 +52,7 @@ const faqs = [
     id: 8,
     question: "What kind of support do I get after completing the program?",
     answer:
-      "You'll receive access to all course materials, ongoing community support through our private group, monthly alumni Q&A sessions, and continued access to our exclusive job board with hundreds of roles available over time. You're never left on your own.",
+      "You'll receive access to all course materials, ongoing community support through our private group, and continued access to our exclusive job board with hundreds of roles available over time. You're never left on your own.",
   },
 ];
 
