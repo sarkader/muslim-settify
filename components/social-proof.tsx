@@ -7,7 +7,6 @@ const testimonials = [
   {
     id: 1,
     name: "Aqib",
-    location: "United Kingdom",
     initials: "AQ",
     color: "from-[#0066FF] to-[#0052CC]",
     summary: "High-ticket setter working across multiple offers after leaving his job.",
@@ -17,7 +16,6 @@ const testimonials = [
   {
     id: 2,
     name: "Melih",
-    location: "Turkey & UAE",
     initials: "ME",
     color: "from-[#00D4AA] to-[#00B894]",
     summary: "Holds two remote setter roles with Muslim influencers.",
@@ -27,7 +25,6 @@ const testimonials = [
   {
     id: 3,
     name: "Mohamad Hussein",
-    location: "Middle East",
     initials: "MH",
     color: "from-[#0066FF] to-[#0052CC]",
     summary: "Moved from setter to COO inside a values-first agency.",
@@ -37,7 +34,6 @@ const testimonials = [
   {
     id: 4,
     name: "Aeman",
-    location: "Remote",
     initials: "AE",
     color: "from-[#00D4AA] to-[#00B894]",
     summary: "Relocated while working an agency setter role.",
@@ -47,7 +43,6 @@ const testimonials = [
   {
     id: 5,
     name: "Hosaam",
-    location: "Saudi Arabia",
     initials: "HO",
     color: "from-[#0066FF] to-[#0052CC]",
     summary: "Balanced two setter roles shortly after joining.",
@@ -57,7 +52,6 @@ const testimonials = [
   {
     id: 6,
     name: "Muhammad Afdhal",
-    location: "Southeast Asia",
     initials: "MA",
     color: "from-[#00D4AA] to-[#00B894]",
     summary: "Consistently booking meetings for remote clients.",
@@ -67,7 +61,6 @@ const testimonials = [
   {
     id: 7,
     name: "Abid ur Rahman",
-    location: "Middle East",
     initials: "AR",
     color: "from-[#0066FF] to-[#0052CC]",
     summary: "Earns a base salary plus commission in his setter role.",
@@ -77,7 +70,6 @@ const testimonials = [
   {
     id: 8,
     name: "Muntasir",
-    location: "Singapore",
     initials: "MU",
     color: "from-[#00D4AA] to-[#00B894]",
     summary: "Closed his first paid deal only days after onboarding.",
@@ -87,7 +79,6 @@ const testimonials = [
   {
     id: 9,
     name: "Shehab",
-    location: "Bangladesh",
     initials: "SH",
     color: "from-[#0066FF] to-[#0052CC]",
     summary: "Started with zero high-ticket sales experience.",
@@ -174,9 +165,6 @@ export function SocialProof() {
                         <span>FASTEST</span>
                       </div>
                     )}
-                  </div>
-                  <div className="text-[10px] md:text-xs lg:text-sm text-[#718096] truncate">
-                    {testimonial.location}
                   </div>
                 </div>
               </div>
