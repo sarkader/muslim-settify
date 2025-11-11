@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
-import { Features } from "@/components/features";
-import { ExclusiveCommunity } from "@/components/exclusive-community";
+import { CombinedOverview } from "@/components/combined-overview";
 import { VideoTestimonials } from "@/components/video-testimonials";
 import { SocialProof } from "@/components/social-proof";
 import { FAQ } from "@/components/faq";
@@ -15,8 +14,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <VideoTestimonials />
-      <ExclusiveCommunity />
-      <Features />
+      <CombinedOverview />
       <WorldMapSection />
       <SocialProof />
       <FAQ />

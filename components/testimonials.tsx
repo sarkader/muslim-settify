@@ -13,6 +13,14 @@ const testimonials = [
     text: "Alhamdulillah, within 3 months of joining Muslim Settify, I landed my first client. Now I'm earning $12k monthly working flexible hours. This program changed my life.",
   },
   {
+    name: "Muntasir Rahman",
+    role: "Remote Setter",
+    location: "Singapore",
+    income: "$700 in 3 days",
+    image: "MR",
+    text: "After joining I followed the outreach scripts step-by-step. Within 48 hours I booked paid calls and collected $700 while still exploring long-term roles.",
+  },
+  {
     name: "Fatima Ali",
     role: "Remote Scheduler",
     location: "Dubai, Gulf Region",

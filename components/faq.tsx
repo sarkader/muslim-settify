@@ -160,30 +160,6 @@ export function FAQ() {
           })}
         </motion.div>
 
-        {/* BOTTOM CTA */}
-        <motion.div
-          initial={{ opacity: 1, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12 text-center"
-        >
-          <p className="text-lg text-[#1A202C] font-medium mb-6">
-            Still have questions?
-          </p>
-          <a
-            href="https://form.typeform.com/to/ztBUiWgs?typeform-source=becomeasetter.info"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              variant="outline"
-              className="border-2 border-[#0066FF] text-[#0066FF] font-bold px-8 py-3 hover:bg-[#0066FF] hover:text-white transition-all duration-200"
-            >
-              Contact Us
-            </Button>
-          </a>
-        </motion.div>
       </div>
     </section>
   );

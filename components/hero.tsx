@@ -112,7 +112,7 @@ export function Hero() {
               variant="outline"
               className="border-2 border-[#E2E8F0] hover:border-[#0066FF] hover:text-[#0066FF] text-[#1A202C] font-bold text-sm md:text-lg px-6 md:px-12 py-3 md:py-6 rounded-xl bg-white transition-all duration-200 w-full sm:w-auto"
               onClick={() => {
-                const element = document.querySelector("#features");
+                const element = document.querySelector("#combined-overview");
                 if (element) {
                   element.scrollIntoView({ behavior: "smooth", block: "start" });
                 }

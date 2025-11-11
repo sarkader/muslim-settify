@@ -39,31 +39,34 @@ export function Navbar() {
         <div className="grid grid-cols-3 items-center h-16 md:h-[72px]">
           {/* Logo */}
           <div className="flex justify-start">
-            <a 
-              href="#" 
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+            <Link
+              href="/"
+              aria-label="Go to home"
+              className="flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity"
+              onClick={() => {
                 setMobileMenuOpen(false);
               }}
-              className="flex items-center cursor-pointer hover:opacity-80 transition-opacity"
             >
-              <Image 
-                src="/muslim-settify-logo.png" 
-                alt="Muslim Settify Logo" 
-                width={150} 
-                height={48}
-                className="h-8 md:h-12 w-auto"
+              <Image
+                src="/settify-logo.png"
+                alt="Muslim Settify"
+                width={36}
+                height={36}
                 priority
+                sizes="(max-width: 768px) 28px, 36px"
+                className="h-7 w-7 md:h-9 md:w-9 select-none pointer-events-none"
               />
-            </a>
+              <span className="hidden md:inline text-lg font-bold tracking-tight text-[#1A202C]">
+                Muslim Settify
+              </span>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center justify-center space-x-6 xl:space-x-8">
             <Link
-              href="#features"
-              onClick={(e) => handleLinkClick(e, "#features")}
+              href="#combined-overview"
+              onClick={(e) => handleLinkClick(e, "#combined-overview")}
               className="text-sm xl:text-base font-medium text-[#718096] hover:text-[#0066FF] transition-colors duration-200 whitespace-nowrap"
             >
               Program
@@ -128,8 +131,8 @@ export function Navbar() {
           {/* Mobile Links */}
           <div className="flex flex-col space-y-6">
             <Link
-              href="#features"
-              onClick={(e) => handleLinkClick(e, "#features")}
+              href="#combined-overview"
+              onClick={(e) => handleLinkClick(e, "#combined-overview")}
               className="text-lg font-medium text-[#1A202C] hover:text-[#0066FF] transition-colors"
             >
               Program

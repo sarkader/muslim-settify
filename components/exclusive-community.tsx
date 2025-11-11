@@ -8,13 +8,13 @@ const benefits = [
     icon: Briefcase,
     title: "Hundreds of Roles Available",
     description: "Exclusive access to vetted appointment setting roles from values-aligned businesses actively hiring our students.",
-    stat: "New roles shared daily",
+    stat: "Roles shared frequently",
   },
   {
     icon: Users,
     title: "Community of 150+ Students",
     description: "Connect with peers striving for excellence, accountability, and adab while learning together.",
-    stat: "24/7 peer support",
+    stat: "Dedicated peer support",
   },
   {
     icon: TrendingUp,

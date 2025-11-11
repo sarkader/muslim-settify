@@ -1,9 +1,39 @@
 "use client";
 
-import { TrendingUp, Zap, Coins } from "lucide-react";
+import { Zap, Coins } from "lucide-react";
 import { motion } from "framer-motion";
 
-const videoTestimonials = [
+import { cn } from "@/lib/utils";
+
+type BaseTestimonial = {
+  id: number;
+  name: string;
+  headline: string;
+  subheading: string;
+  timeline: string[];
+  result: string;
+  highlight: boolean;
+  closing?: string;
+};
+
+type YoutubeTestimonial = BaseTestimonial & {
+  videoType: "youtube";
+  videoId: string;
+};
+
+type LoomTestimonial = BaseTestimonial & {
+  videoType: "loom";
+  videoId: string;
+};
+
+type MP4Testimonial = BaseTestimonial & {
+  videoType: "mp4";
+  videoFile: string;
+};
+
+type VideoTestimonial = YoutubeTestimonial | LoomTestimonial | MP4Testimonial;
+
+const videoTestimonials: VideoTestimonial[] = [
   {
     id: 1,
     name: "Aqib",
@@ -26,8 +56,8 @@ const videoTestimonials = [
     name: "Muntasir",
     headline: "Muntasir's Story",
     subheading: "Imagine learning a craft one day, then two days later, you make $700.",
-    videoType: "mp4" as const,
-    videoFile: "muntasir-story.mp4",
+    videoType: "loom" as const,
+    videoId: "9351ea53e9d84356ba84aa2994a900bf",
     timeline: [
       "Start of May → Muntasir has been in a programming course for months...",
       "May 10 → Around this point, he booked a call with me and watched our free training on appointment setting",
@@ -59,8 +89,8 @@ const videoTestimonials = [
     name: "Mohamad Hussein",
     headline: "Mohamad Hussein's Story",
     subheading: "",
-    videoType: "mp4" as const,
-    videoFile: "mohamad-hussein-story.mp4",
+    videoType: "youtube" as const,
+    videoId: "FAbzaf_OO28",
     timeline: [
       "April 29 → Joined our paid community to gain financial freedom",
       "April 30 → Finished all the material in like 12 hours and landed his first role after 1 day",
@@ -90,19 +120,19 @@ const videoTestimonials = [
   },
   {
     id: 5,
-    name: "Khalid",
-    headline: "Khalid's Story",
+    name: "Hosaam",
+    headline: "Hosaam's Story",
     subheading: "",
-    videoType: "mp4" as const,
-    videoFile: "khalid-story.mp4",
+    videoType: "youtube" as const,
+    videoId: "0yU5bezEcxc",
     timeline: [
-      "March 20 → with no stable income, he joined our paid programme",
-      "April 14 → Already made like $500 from working in sales for me",
-      "Mid May → set a $25,000 deal for Buildfst (Not sure if this got closed yet)",
-      "May 28 → Had a big day & around $5k of deals that he set got closed",
-      "Jul 18 → Promoted to executive assistant at Buildfst and now gets a base salary",
+      "Mid August → After being unemployed for the first time in six years, joined the program around August 19",
+      "Around a month later → Landed his first appointment-setting job",
+      "Shortly after → Received three job offers while onboarding",
+      "About 37 days in → Earned roughly $2.3k USD while balancing full-time work",
+      "Now → Working two appointment-setting roles",
     ],
-    result: "Executive Assistant with base salary",
+    result: "Two setting roles • ~$2.3k earned in about 37 days",
     highlight: false,
   },
   {
@@ -110,14 +140,15 @@ const videoTestimonials = [
     name: "Muhammad Afdhal",
     headline: "Muhammad Afdhal's Story",
     subheading: "",
-    videoType: "mp4" as const,
-    videoFile: "muhammad-afdhal-story.mp4",
+    videoType: "loom" as const,
+    videoId: "e26817a50f144028ae2b78754dc2bc30",
     timeline: [
       "April 20 → Joined our paid community",
       "April 26 → Got into his first role",
       "May 31 → Made approx $1.8k working in his role",
       "June 28 → Generated around $3k in total as an appointment setter",
-      "September 14 → Making good money while doing the things he likes",
+      "August 10 → Traveled to Qatar, Tokyo, and India while working remotely",
+      "October 29 → Made around $7-$8k",
     ],
     result: "$4k+ Total Earned",
     highlight: false,
@@ -127,8 +158,8 @@ const videoTestimonials = [
     name: "Abid ur Rahman",
     headline: "Abid ur Rahman's Story",
     subheading: "",
-    videoType: "mp4" as const,
-    videoFile: "abid-ur-rahman-story.mp4",
+    videoType: "loom" as const,
+    videoId: "fb861b6aa49b4e57a63db9ccf7a9c679",
     timeline: [
       "May 25 → Joined our paid community",
       "May 31 → Landed his first role, which is a big role for a muslim influencer",
@@ -143,8 +174,8 @@ const videoTestimonials = [
     name: "Shehab",
     headline: "Shehab's Story",
     subheading: "March 30 → never worked in high ticket sales. Lives in Bangladesh.",
-    videoType: "mp4" as const,
-    videoFile: "shehab-story.mp4",
+    videoType: "loom" as const,
+    videoId: "11c0981d645c478ebc2323cb01c8f308",
     timeline: [
       "March 31st → Decided to invest in my paid programme, after knowing about my stuff for a while",
       "April 15 → Around this point, he was placed in a role(I help paid community members get skool appointment setting roles)",
@@ -205,9 +236,10 @@ export function VideoTestimonials() {
                   },
                 },
               }}
-              className={`bg-white rounded-2xl p-4 md:p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 flex flex-col ${
+              className={cn(
+                "bg-white rounded-2xl p-4 md:p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 flex flex-col",
                 testimonial.highlight ? "border-2 border-[#00D4AA]" : ""
-              }`}
+              )}
             >
               {/* EARNINGS BADGE - ELEGANT SHIMMER */}
               <div className="mb-3 md:mb-4 h-10 md:h-14 flex items-center justify-center relative -mx-1 md:mx-0">
@@ -243,6 +275,17 @@ export function VideoTestimonials() {
                   <iframe
                     className="w-full h-full"
                     src={`https://www.youtube.com/embed/${testimonial.videoId}`}
+                    title={testimonial.headline}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              ) : testimonial.videoType === "loom" && testimonial.videoId ? (
+                <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-md mb-3 md:mb-4">
+                  <iframe
+                    className="w-full h-full"
+                    src={`https://www.loom.com/embed/${testimonial.videoId}`}
                     title={testimonial.headline}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
