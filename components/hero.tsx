@@ -123,52 +123,8 @@ export function Hero() {
           animation: iconBounce 1.6s ease-in-out infinite;
         }
       `}</style>
-      <section className="relative overflow-hidden min-h-[85vh] md:min-h-[90vh] flex items-center py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#E8F3FF] via-white/60 to-white/90" />
-          <motion.div
-            className="absolute -top-40 -left-32 md:-left-48 w-[28rem] h-[28rem] md:w-[34rem] md:h-[34rem] rounded-full blur-3xl opacity-80"
-            style={{
-              background:
-                "radial-gradient(circle at center, rgba(0,102,255,0.45) 0%, rgba(0,102,255,0) 65%)",
-            }}
-            animate={{ x: ["0%", "6%", "-4%", "0%"], y: ["0%", "4%", "-3%", "0%"] }}
-            transition={{ duration: 22, repeat: Infinity, repeatType: "mirror" }}
-          />
-          <motion.div
-            className="absolute -bottom-44 -right-32 md:-right-48 w-[30rem] h-[30rem] md:w-[36rem] md:h-[36rem] rounded-full blur-[140px] opacity-75"
-            style={{
-              background:
-                "radial-gradient(circle at center, rgba(0,212,170,0.5) 0%, rgba(0,212,170,0) 70%)",
-            }}
-            animate={{ x: ["0%", "-5%", "6%", "0%"], y: ["0%", "-6%", "2%", "0%"] }}
-            transition={{ duration: 26, repeat: Infinity, repeatType: "mirror" }}
-          />
-          <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[22rem] h-[22rem] md:w-[28rem] md:h-[28rem] rounded-full blur-[120px] opacity-65"
-            style={{
-              background:
-                "radial-gradient(circle at center, rgba(91,43,225,0.45) 0%, rgba(91,43,225,0) 70%)",
-            }}
-            animate={{ scale: [0.95, 1.05, 0.97], rotate: [0, 6, -4, 0] }}
-            transition={{ duration: 24, repeat: Infinity, repeatType: "mirror" }}
-          />
-          <motion.div
-            className="absolute top-10 right-1/2 translate-x-1/2 w-[18rem] h-[18rem] md:w-[22rem] md:h-[22rem] rounded-full blur-[110px] opacity-70 mix-blend-screen"
-            style={{
-              background:
-                "radial-gradient(circle at center, rgba(255,198,126,0.45) 0%, rgba(255,198,126,0) 65%)",
-            }}
-            animate={{ y: ["0%", "8%", "-4%", "0%"], x: ["0%", "3%", "-2%", "0%"] }}
-            transition={{ duration: 28, repeat: Infinity, repeatType: "mirror" }}
-          />
-          <motion.div
-            className="absolute bottom-1/3 left-6 md:left-16 w-40 h-40 md:w-56 md:h-56 rounded-3xl bg-gradient-to-tr from-[#0066FF]/35 via-[#7648EA]/25 to-transparent blur-2xl opacity-80 mix-blend-screen"
-            animate={{ rotate: [0, 10, -8, 0], scale: [0.95, 1.05, 1] }}
-            transition={{ duration: 18, repeat: Infinity, repeatType: "mirror" }}
-          />
-        </div>
-        <div className="max-w-6xl mx-auto w-full">
+      <section className="relative z-10 flex min-h-[85vh] items-center overflow-hidden py-12 md:min-h-[90vh] md:py-20">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* CENTERED HEADLINE */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

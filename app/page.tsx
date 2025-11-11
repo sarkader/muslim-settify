@@ -8,15 +8,23 @@ import { SocialProof } from "@/components/social-proof";
 import { FAQ } from "@/components/faq";
 import { ApplyCTA } from "@/components/apply-cta";
 import { Footer } from "@/components/footer";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import { WorldMapDemo } from "@/components/ui/world-map-demo";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <Hero />
+      <AuroraBackground
+        className="h-auto min-h-[85vh] items-stretch justify-start overflow-hidden md:min-h-[90vh] md:py-10"
+        showRadialGradient={false}
+      >
+        <Hero />
+      </AuroraBackground>
       <VideoTestimonials />
       <ExclusiveCommunity />
       <Features />
+      <WorldMapDemo />
       <ProgramIncludes />
       <SocialProof />
       <FAQ />

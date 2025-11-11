@@ -6,15 +6,15 @@ import { Briefcase, Users, MessageCircle, TrendingUp, MapPin, Lock, Sparkles } f
 const benefits = [
   {
     icon: Briefcase,
-    title: "Up to 20 High-Quality Jobs Posted Daily",
+    title: "Daily Remote Job Leads",
     description: "Exclusive access to appointment setting roles you won't find anywhere else. Muslim influencers, coaches, and high-ticket businesses actively hiring members of our community.",
-    stat: "87% placement rate",
+    stat: "Fresh roles every week",
   },
   {
     icon: Users,
-    title: "Thriving Community of 150+ Earners",
-    description: "Connect with like-minded Muslims already earning $3k-$15k monthly. Share wins, get feedback, and learn from students at all stages of their journey.",
-    stat: "24/7 active support",
+    title: "Thriving Community of Dedicated Earners",
+    description: "Connect with like-minded Muslims earning remote income. Share wins, get feedback, and learn from students at all stages of their journey.",
+    stat: "Supportive peer network",
   },
   {
     icon: TrendingUp,
@@ -26,7 +26,7 @@ const benefits = [
     icon: MapPin,
     title: "Perfect for Hijrah & Remote Work",
     description: "Earn from anywhere—Madinah, UAE, Turkey, or wherever Allah calls you. Many students work remotely while making hijrah to Islamic countries.",
-    stat: "100% location independent",
+    stat: "Built for remote freedom",
   },
 ];
 
@@ -66,7 +66,7 @@ export function ExclusiveCommunity() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-[#718096] max-w-3xl mx-auto leading-relaxed"
           >
-            This isn't a course you buy and forget. When you join Muslim Settify, you're joining a tight-knit community of 150+ Muslims earning real income, with exclusive job opportunities posted daily.
+            This isn't a course you buy and forget. When you join Muslim Settify, you're joining a tight-knit community of Muslims earning real income, with exclusive job opportunities posted consistently.
           </motion.p>
         </div>
 
@@ -187,9 +187,9 @@ export function ExclusiveCommunity() {
               className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto"
             >
               {[
-                { label: "Students Preparing for Hijrah", value: "15+" },
-                { label: "Members Working from Islamic Countries", value: "35+" },
-                { label: "Location Independent Roles", value: "90%" },
+                { label: "Students Preparing for Hijrah", value: "Real success journeys" },
+                { label: "Members Working from Islamic Countries", value: "Global community" },
+                { label: "Location Independent Roles", value: "Remote-first pathways" },
               ].map((stat, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-3 md:p-4 lg:p-6 border border-white/20">
                   <div className="text-xl md:text-2xl lg:text-3xl font-bold mb-1 md:mb-2">{stat.value}</div>

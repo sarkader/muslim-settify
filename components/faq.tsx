@@ -26,54 +26,36 @@ const faqs = [
   },
   {
     id: 4,
-    question: "Is this income halal and permissible in Islam?",
-    answer:
-      "Yes. The program includes a dedicated module on Islamic business ethics and ensuring all transactions align with Shariah principles. We work exclusively with businesses offering legitimate products and services, and avoid any haram industries. You'll learn to sell with integrity while maintaining 100% halal income.",
-  },
-  {
-    id: 5,
     question: "How much time do I need to dedicate weekly?",
     answer:
       "During the 8-week training, expect 10-15 hours per week including live sessions, practice, and assignments. Once working, most setters dedicate 20-30 hours per week, though this is flexible based on your income goals and availability.",
   },
   {
-    id: 6,
+    id: 5,
     question: "What if my English isn't perfect?",
     answer:
       "Clear communication is important, but native-level fluency is not required. We provide comprehensive scripts and templates, and many successful setters are non-native English speakers. Minor accent or grammar issues rarely affect results.",
   },
   {
-    id: 7,
+    id: 6,
     question: "Can I do this while working full-time?",
     answer:
       "Absolutely. Many students complete the training while employed full-time. Live sessions are recorded for flexibility, and the remote nature of appointment setting allows you to work around your existing schedule.",
   },
   {
-    id: 8,
+    id: 7,
     question: "How long until I start earning?",
     answer:
       "Most students land their first client within 4-8 weeks of completing the program. Initial earnings vary, but the average student reaches $3k-5k monthly within their first 3 months, with many scaling beyond $10k as they gain experience.",
   },
   {
-    id: 9,
+    id: 8,
     question: "Do you help me find clients?",
     answer:
       "Yes. The program includes comprehensive job placement support including resume review, client outreach templates, interview preparation, and access to our exclusive job board featuring businesses actively seeking setters.",
   },
   {
-    id: 10,
-    question: "What's the refund policy?",
-    answer:
-      "We offer a 30-day money-back guarantee. If you complete the first two weeks of training and feel the program isn't right for you, request a full refund—no questions asked.",
-  },
-  {
-    id: 11,
-    question: "Is this suitable for women/sisters?",
-    answer:
-      "Absolutely. Approximately 35% of our students are women. The remote nature of this work makes it particularly suitable for those who prefer working from home, including mothers balancing family responsibilities.",
-  },
-  {
-    id: 12,
+    id: 9,
     question: "What kind of support do I get after completing the program?",
     answer:
       "You'll receive lifetime access to all course materials, ongoing community support through our private community, monthly alumni Q&A sessions, and continued access to our exclusive job board with up to 20 new jobs posted daily. You're never left on your own.",
