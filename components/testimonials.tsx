@@ -40,9 +40,12 @@ const testimonials = [
 
 export function Testimonials() {
   const prefersReduced = useReducedMotion();
-  const midpoint = Math.ceil(testimonials.length / 2);
-  const row1 = testimonials.slice(0, midpoint);
-  const row2 = testimonials.slice(midpoint);
+  const row1Count =
+    testimonials.length >= 3
+      ? 3
+      : Math.ceil(testimonials.length / 2);
+  const row1 = testimonials.slice(0, row1Count);
+  const row2 = testimonials.slice(row1Count);
 
   const loopRow1 = prefersReduced ? row1 : [...row1, ...row1];
   const loopRow2 = prefersReduced ? row2 : [...row2, ...row2];

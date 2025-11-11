@@ -35,6 +35,22 @@ type VideoTestimonial = YoutubeTestimonial | LoomTestimonial | MP4Testimonial;
 
 const videoTestimonials: VideoTestimonial[] = [
   {
+    id: 8,
+    name: "Muntasir",
+    headline: "Muntasir's Story",
+    subheading: "Imagine learning a craft one day, then two days later, you make $700.",
+    videoType: "loom" as const,
+    videoId: "9351ea53e9d84356ba84aa2994a900bf",
+    timeline: [
+      "Start of May → Muntasir has been in a programming course for months...",
+      "May 10 → Around this point, he booked a call with me and watched our free training on appointment setting",
+      "May 12 → We had our call, and he expressed his desire to make money fast, and liked appointment setting/DM work due to it being easy and fast cash",
+      "May 14 → He collects a $700 payment from a coach via stripe",
+    ],
+    result: "$700 in just 3 days total",
+    highlight: true,
+  },
+  {
     id: 1,
     name: "Aqib",
     headline: "Here Is Aqib Who Made $60k So Far From Setting And Closing",
@@ -50,22 +66,6 @@ const videoTestimonials: VideoTestimonial[] = [
     ],
     result: "$60k+ Total Earnings",
     highlight: false,
-  },
-  {
-    id: 8,
-    name: "Muntasir",
-    headline: "Muntasir's Story",
-    subheading: "Imagine learning a craft one day, then two days later, you make $700.",
-    videoType: "loom" as const,
-    videoId: "9351ea53e9d84356ba84aa2994a900bf",
-    timeline: [
-      "Start of May → Muntasir has been in a programming course for months...",
-      "May 10 → Around this point, he booked a call with me and watched our free training on appointment setting",
-      "May 12 → We had our call, and he expressed his desire to make money fast, and liked appointment setting/DM work due to it being easy and fast cash",
-      "May 14 → He collects a $700 payment from a coach via stripe",
-    ],
-    result: "$700 in just 3 days total",
-    highlight: true,
   },
   {
     id: 2,
@@ -238,7 +238,7 @@ export function VideoTestimonials() {
               }}
               className={cn(
                 "bg-white rounded-2xl p-4 md:p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 flex flex-col",
-                testimonial.highlight ? "border-2 border-[#00D4AA]" : ""
+                testimonial.highlight ? "border-2 border-[#00D4AA] lg:col-start-2" : ""
               )}
             >
               {/* EARNINGS BADGE - ELEGANT SHIMMER */}

@@ -48,7 +48,7 @@ export function Navbar() {
               }}
             >
               <Image
-                src="/settify-logo.png"
+                src="/settify-bg.png"
                 alt="Muslim Settify"
                 width={36}
                 height={36}
