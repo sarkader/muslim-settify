@@ -44,7 +44,7 @@ export function Hero() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#1A202C] leading-tight md:leading-[1.2] mb-4 md:mb-6 max-w-4xl mx-auto">
             <span className="block">Learn Appointment Setting &</span>
             <span className="block whitespace-normal sm:whitespace-nowrap">
-              Earn up to{" "}
+              Earn Up To{" "}
               <span className="bg-gradient-to-r from-[#0066FF] via-purple-600 to-[#00D4AA] bg-clip-text text-transparent font-extrabold animate-gradient whitespace-nowrap">
                 $2k-$15k Per Month
               </span>
