@@ -19,7 +19,7 @@ const testimonials = [
     initials: "ME",
     color: "from-[#00D4AA] to-[#00B894]",
     summary: "Holds two remote setter roles with Muslim influencers.",
-    earnings: "$3k-$4k monthly OTE",
+    earnings: "$3k-$4k OTE • traveling freely",
     highlight: false,
   },
   {
