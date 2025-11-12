@@ -16,13 +16,13 @@ const faqs = [
     id: 2,
     question: "Do I need prior sales experience?",
     answer:
-      "No. The program is designed for complete beginners and includes comprehensive training on all aspects of appointment setting, from initial outreach to advanced follow-up. Many of our most consistent students started with zero sales background.",
+      "No. The program is designed for complete beginners and includes comprehensive training on all aspects of appointment setting. Many of our most consistent students started with zero sales background.",
   },
   {
     id: 3,
     question: "How much time do I need to dedicate weekly?",
     answer:
-      "During the 8-week training, expect 10-15 hours per week including live sessions, practice, and assignments. Once working, most setters dedicate 20-30 hours per week, though this is flexible based on your income goals and availability.",
+      "During the 3-month training, expect 10-15 hours per week including live sessions, practice, and assignments. Once working, most setters dedicate 20-30 hours per week, though this is flexible based on your income goals and availability.",
   },
   {
     id: 4,
