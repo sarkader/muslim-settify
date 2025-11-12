@@ -54,7 +54,7 @@ const testimonials = [
     name: "Muhammad Afdhal",
     initials: "MA",
     color: "from-[#00D4AA] to-[#00B894]",
-    summary: "Consistently booking meetings for remote clients.",
+    summary: "Consistently stacking commissions across remote offers.",
     earnings: "~$7k-$8k total collected",
     highlight: false,
   },
