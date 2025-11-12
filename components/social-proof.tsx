@@ -37,7 +37,7 @@ const testimonials = [
     initials: "AE",
     color: "from-[#00D4AA] to-[#00B894]",
     summary: "Relocated while working an agency setter role.",
-    earnings: "$5k-$8k OTE",
+    earnings: "$2k-$5k OTE",
     highlight: false,
   },
   {
@@ -64,7 +64,7 @@ const testimonials = [
     initials: "AR",
     color: "from-[#0066FF] to-[#0052CC]",
     summary: "Earns a base salary plus commission in his setter role.",
-    earnings: "4-figure monthly income",
+    earnings: "4-figure OTE",
     highlight: false,
   },
   {
