@@ -22,7 +22,7 @@ const faqs = [
     id: 3,
     question: "How much time do I need to dedicate weekly?",
     answer:
-      "During the 3-month training, expect 10-15 hours per week including live sessions, practice, and assignments. Once working, most setters dedicate 20-30 hours per week, though this is flexible based on your income goals and availability.",
+      "During the 3-month training it's possible to earn a role within the first few months, just like many brothers have experienced. Results depend on the time and consistency you put in—we've seen students land roles within a week, and others within four weeks.",
   },
   {
     id: 4,
@@ -46,13 +46,13 @@ const faqs = [
     id: 7,
     question: "Do you help me find clients?",
     answer:
-      "Yes. The program includes career support such as resume review, outreach templates, interview preparation, and access to our exclusive training and job board featuring businesses actively seeking setters.",
+      "Yes. The program includes appointment-setting career support such as outreach scripts, personalized feedback, interview preparation, and access to our exclusive training and job board featuring businesses actively seeking setters.",
   },
   {
     id: 8,
     question: "What kind of support do I get after completing the program?",
     answer:
-      "You'll receive access to all course materials, ongoing community support through our private group, and continued access to our exclusive training and job board with hundreds of roles available over time. You're never left on your own.",
+      "You'll receive access to all course materials, ongoing community support through our private group, and continued access to our exclusive training and job board with thousands of roles available over time. You're never left on your own.",
   },
 ];
 
