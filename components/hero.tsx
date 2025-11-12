@@ -41,13 +41,16 @@ export function Hero() {
             viewport={{ once: true, amount: 0.2 }}
             className="text-center mb-6 md:mb-8"
           >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#1A202C] leading-[1.2] mb-4 md:mb-6 max-w-4xl mx-auto">
-            Learn Appointment Setting & Earn up to{" "}
-              <span className="bg-gradient-to-r from-[#0066FF] via-purple-600 to-[#00D4AA] bg-clip-text text-transparent font-extrabold animate-gradient">
-              $2k-$15k Per Month
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#1A202C] leading-tight md:leading-[1.2] mb-4 md:mb-6 max-w-4xl mx-auto">
+            <span className="block">Learn Appointment Setting &</span>
+            <span className="block whitespace-normal sm:whitespace-nowrap">
+              Earn up to{" "}
+              <span className="bg-gradient-to-r from-[#0066FF] via-purple-600 to-[#00D4AA] bg-clip-text text-transparent font-extrabold animate-gradient whitespace-nowrap">
+                $2k-$15k Per Month
               </span>
-              {" "}Remotely
-            </h1>
+            </span>
+            <span className="block">Remotely</span>
+          </h1>
             <motion.p
               variants={P}
               initial="hidden"
