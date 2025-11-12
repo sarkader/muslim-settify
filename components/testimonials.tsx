@@ -29,6 +29,14 @@ const testimonials = [
     text: "As a mother of three, flexibility was crucial. Muslim Settify taught me how to build a real business from home. I'm so grateful for this opportunity.",
   },
   {
+    name: "Mohamad Hussein",
+    role: "Setter → Closer → COO",
+    location: "Middle East",
+    income: "$7k-$8k/month",
+    image: "MH",
+    text: "In a few months I went from completing the modules to booking meetings, closing deals, and now serving as a COO with steady revenue. The structure kept me accountable at each step.",
+  },
+  {
     name: "Omar Malik",
     role: "Appointment Coordinator",
     location: "Toronto, Canada",
