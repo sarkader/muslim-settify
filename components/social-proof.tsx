@@ -27,7 +27,7 @@ const testimonials = [
     name: "Mohamad Hussein",
     initials: "MH",
     color: "from-[#0066FF] to-[#0052CC]",
-    summary: "Moved from setter to COO inside a values-first agency.",
+    summary: "Moved from setter to closer to COO inside a values-first agency.",
     earnings: "$7k-$8k monthly",
     highlight: false,
   },
