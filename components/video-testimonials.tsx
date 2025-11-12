@@ -54,8 +54,9 @@ const videoTestimonials: VideoTestimonial[] = [
       "July 15 → Aqib made around $35k (not fully collected)",
       "July 20 → Hired as a closer for Buildfast",
       "September → Closed multiple deals for Buildfast",
+      "November 1 → By this point has hit his first $14k+ month for his business.",
     ],
-    result: "$60k+ Total Earnings",
+    result: "$60k+ total earnings • $14k+ best month",
     highlight: false,
   },
   {
@@ -75,6 +76,7 @@ const videoTestimonials: VideoTestimonial[] = [
       "August 11 → Made $1000 in the last 10 days then dropped out of university and is on track to earn more than his parents this month",
       "September → Received paychecks in the thousands from both his offers",
       "October → Traveled while working freely to Turkey and met Jamil in the UAE",
+      "October → Has $3-4K OTE",
     ],
     result: "$3k-$4k OTE + traveling freely",
     highlight: false,
@@ -98,7 +100,7 @@ const videoTestimonials: VideoTestimonial[] = [
       "July 19 → Made almost $2.1k on his offer where he now works as an executive assistant",
       "August 1 → Made almost $3.5k in total",
       "September → Gets paid a base salary and a commission on a $3k OTE role",
-      "October → OTE is around $7k-$8k and became a COO",
+      "October → OTE is around $7k-$8k and is a closer",
     ],
     result: "COO earning $7-8k OTE",
     highlight: false,
@@ -113,14 +115,14 @@ const videoTestimonials: VideoTestimonial[] = [
     timeline: [
       "June 14 → Joined the paid community, having worked with a couple of offers before joining",
       "July 1 → Made $1000+ on the offer he is on",
-      "July 14 → Landed a role with an agency that makes $350k per month. The OTE is $5k-$8k per month, and the top setter on that offer makes $10-$12k",
+      "July 14 → Landed a role with an agency that makes $350k per month. The OTE is $2k-$8k per month",
       "August 3 → $11k in deals closed from Aeman's sets, and he made around $550 in one day",
       "August 22 → Made hijrah to Madinah",
       "End of August → Hired as a coach for a different offer",
       "September → Collected his first paycheck from his new offer",
       "September 6 → About to settle in an apartment in Madinah soon, in shaa Allah",
     ],
-    result: "Landed $5k-$8k OTE working remotely",
+    result: "Landed $2k-$8k OTE working remotely",
     highlight: false,
   },
   {
@@ -134,7 +136,7 @@ const videoTestimonials: VideoTestimonial[] = [
       "Start of May → Muntasir has been in a programming course for months...",
       "May 10 → Around this point, he booked a call with me and watched our free training on appointment setting",
       "May 12 → We had our call, and he expressed his desire to make money fast, and liked appointment setting/DM work due to it being easy and fast cash",
-      "May 14 → He collects a $700 payment from a coach via stripe",
+      "May 14 → He collects a $700 payment from a coach via stripe for DM work",
     ],
     result: "$700 in just 3 days total",
     highlight: true,
@@ -149,9 +151,9 @@ const videoTestimonials: VideoTestimonial[] = [
     timeline: [
       "Mid August → After being unemployed for the first time in six years, joined the program around August 19",
       "Around a month later → Landed his first appointment-setting job",
-      "Shortly after → Received three job offers while onboarding",
-      "About 37 days after landing his role → Earned roughly $2.3k USD while balancing full-time work",
-      "Now → Working two appointment-setting roles",
+      "Shortly after → Received three job offers after onboarding",
+      "About 37 days after landing his role → Earned roughly $2k+ while balancing full-time work",
+      "End of October → Working two appointment-setting roles",
     ],
     result: "Two setting roles • ~$2k+ earned in about 37 days",
     highlight: false,
@@ -188,10 +190,9 @@ const videoTestimonials: VideoTestimonial[] = [
       "May 31 → Landed his first role, which is a big role for a muslim influencer",
       "May → Really happy for his new role",
       "June 4 → Generated just under $1000 in commission for himself on the role",
-      "July → Made $1000+ and also got promoted in his current role",
       "July 14 → Landed a role with an agency owner with 76k followers on Instagram and 1.8k members on Skool and now gets a four-figure base salary plus commission",
     ],
-    result: "4-figure base salary + commission",
+    result: "Landed salary + commission",
     highlight: false,
   },
   {
@@ -209,7 +210,7 @@ const videoTestimonials: VideoTestimonial[] = [
       "May 2 → Until this point, he made $1400 approx in earnings from the role",
       "May 3 → Around this point, he started working for Ustadh Abdul Aziz al Haggan's academy (he has 300k on Insta) as an appointment setter & closer",
       "May 13 → He's settling into the new role well and has set/closed 10 deals for the academy",
-      "June 15 → Made around $2.1k on his role",
+      "June 15 → Made $2k+",
     ],
     closing: "He's in bangladesh, and had 0 high ticket sales experience. If he can do it, why can't you?",
     result: "$2.1k+ from Bangladesh",
@@ -232,6 +233,15 @@ export function VideoTestimonials() {
           >
             Hear From Our Students Themselves
           </motion.h2>
+        <motion.p
+          initial={{ opacity: 1, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
+          className="text-sm sm:text-base text-[#A0AEC0]"
+        >
+          Figures & dates are rough/approximated.
+        </motion.p>
         </div>
 
         {/* VIDEO GRID - 3 columns desktop, 2 tablet, 1 mobile */}

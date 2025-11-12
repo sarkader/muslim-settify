@@ -53,7 +53,7 @@ export function ApplyCTA() {
           </AnimatedButton>
 
           <p className="text-sm text-[#718096] mt-6">
-            No credit card required • We review every application carefully
+            No debit card required • We review every application carefully
           </p>
         </motion.div>
       </div>

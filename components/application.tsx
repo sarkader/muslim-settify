@@ -315,7 +315,7 @@ export function Application() {
                 {/* Trust Text */}
                 <p className="text-center text-sm text-[#718096] flex items-center justify-center gap-2">
                   <Check className="w-4 h-4 text-[#00D4AA]" />
-                  No credit card required at this stage
+                  No debit card required at this stage
                 </p>
               </form>
 
