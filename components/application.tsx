@@ -136,7 +136,7 @@ export function Application() {
                     Proven Track Record
                   </h4>
                   <p className="text-base text-[#718096] leading-relaxed">
-                    Join 150+ students already building steady income as remote appointment setters.
+                    Join 100+ students already building steady income as remote appointment setters.
                   </p>
                 </div>
               </div>
@@ -323,7 +323,7 @@ export function Application() {
               <div className="mt-8 pt-8 border-t border-[#E2E8F0] flex flex-wrap justify-center gap-6 text-sm text-[#718096]">
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4" />
-                  <span>150+ Students</span>
+                  <span>100+ Students</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4" />

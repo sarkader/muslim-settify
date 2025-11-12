@@ -10,7 +10,7 @@ const faqs = [
     id: 1,
     question: "What makes Muslim Settify different from free YouTube training?",
     answer:
-      "Two things: our exclusive training and job board, and an active community. We curate hundreds of roles for our students and maintain a private community of 150+ members offering peer accountability, scheduled coaching calls, and networking opportunities. You're not learning alone from videos—you have structured accountability and direct guidance.",
+      "Two things: our exclusive training and job board, and an active community. We curate hundreds of roles for our students and maintain a private community of 100+ members offering peer accountability, scheduled coaching calls, and networking opportunities. You're not learning alone from videos—you have structured accountability and direct guidance.",
   },
   {
     id: 2,

@@ -19,7 +19,7 @@ const testimonials = [
     initials: "ME",
     color: "from-[#00D4AA] to-[#00B894]",
     summary: "Holds two remote setter roles with Muslim influencers.",
-    earnings: "$2k-$3k monthly OTE",
+    earnings: "$3k-$4k monthly OTE",
     highlight: false,
   },
   {
@@ -28,7 +28,7 @@ const testimonials = [
     initials: "MH",
     color: "from-[#0066FF] to-[#0052CC]",
     summary: "Moved from setter to closer to COO inside a values-first agency.",
-    earnings: "$7k-$8k monthly",
+    earnings: "$7k OTE monthly",
     highlight: false,
   },
   {
@@ -37,7 +37,7 @@ const testimonials = [
     initials: "AE",
     color: "from-[#00D4AA] to-[#00B894]",
     summary: "Relocated while working an agency setter role.",
-    earnings: "$2k-$5k OTE",
+    earnings: "Landed $2k-$5k OTE",
     highlight: false,
   },
   {
@@ -46,7 +46,7 @@ const testimonials = [
     initials: "HO",
     color: "from-[#0066FF] to-[#0052CC]",
     summary: "Balanced two setter roles shortly after joining.",
-    earnings: "~$2.3k earned in 37 days",
+    earnings: "~$2k+ earned in 37 days",
     highlight: false,
   },
   {
@@ -64,7 +64,7 @@ const testimonials = [
     initials: "AR",
     color: "from-[#0066FF] to-[#0052CC]",
     summary: "Earns a base salary plus commission in his setter role.",
-    earnings: "4-figure OTE",
+    earnings: "Landed 4-figure OTE",
     highlight: false,
   },
   {
@@ -109,7 +109,7 @@ export function SocialProof() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="text-lg text-[#718096]"
           >
-            Join 150+ students building sustainable income
+            Join 100+ students building sustainable income
           </motion.p>
         </div>
 

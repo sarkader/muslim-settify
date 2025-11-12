@@ -55,7 +55,7 @@ export function Hero() {
               viewport={{ once: true, amount: 0.25 }}
               className="text-lg sm:text-xl text-[#718096] leading-relaxed max-w-3xl mx-auto"
             >
-              Join 150+ students learning appointment setting with a values-first approach. Watch this 6-minute video to see how it works.
+              Join 100+ students learning appointment setting with a values-first approach. Watch this 6-minute video to see how it works.
             </motion.p>
           </motion.div>
 

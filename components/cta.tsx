@@ -45,7 +45,7 @@ export function CTA() {
           viewport={{ once: true, amount: 0.25 }}
           className="text-xl text-white/90 mb-8 max-w-2xl mx-auto"
         >
-          Join 150+ students already building disciplined remote careers.
+          Join 100+ students already building disciplined remote careers.
           Start today and progress at a pace that matches your effort. Results vary.
         </motion.p>
 

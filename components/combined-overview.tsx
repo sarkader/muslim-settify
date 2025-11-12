@@ -24,7 +24,7 @@ const overviewItems = [
     icon: Briefcase,
   },
   {
-    title: "Community of 150+ Students",
+    title: "Community of 100+ Students",
     description: "Progress with accountability, adab, and peer support.",
     icon: Users,
   },
@@ -79,7 +79,7 @@ export function CombinedOverview() {
             viewport={{ once: true, amount: 0.25 }}
             className="text-base sm:text-lg md:text-xl text-[#718096] max-w-3xl mx-auto"
           >
-            Join 150+ students building dependable appointment-setting skills with mentorship, a step-by-step curriculum, and real opportunities.
+            Join 100+ students building dependable appointment-setting skills with mentorship, a step-by-step curriculum, and real opportunities.
           </motion.p>
         </div>
 

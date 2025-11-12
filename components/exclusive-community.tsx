@@ -12,7 +12,7 @@ const benefits = [
   },
   {
     icon: Users,
-    title: "Community of 150+ Students",
+    title: "Community of 100+ Students",
     description: "Connect with peers striving for excellence, accountability, and adab while learning together.",
     stat: "Dedicated peer support",
   },
@@ -66,7 +66,7 @@ export function ExclusiveCommunity() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-[#718096] max-w-3xl mx-auto leading-relaxed"
           >
-            This isn't a course you buy and forget. When you join Muslim Settify, you're joining a tight-knit community of 150+ students building dependable skills with accountability and job opportunities each week.
+            This isn't a course you buy and forget. When you join Muslim Settify, you're joining a tight-knit community of 100+ students building dependable skills with accountability and job opportunities each week.
           </motion.p>
         </div>
 
