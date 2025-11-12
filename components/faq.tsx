@@ -10,7 +10,7 @@ const faqs = [
     id: 1,
     question: "What makes Muslim Settify different from free YouTube training?",
     answer:
-      "Two things: our exclusive job board and active community. We curate hundreds of roles for our students and maintain a private community of 150+ members offering 24/7 support, weekly coaching calls, and networking opportunities. You're not learning alone from videos—you have structured accountability and direct guidance.",
+      "Two things: our exclusive training and job board, and an active community. We curate hundreds of roles for our students and maintain a private community of 150+ members offering peer accountability, scheduled coaching calls, and networking opportunities. You're not learning alone from videos—you have structured accountability and direct guidance.",
   },
   {
     id: 2,
@@ -46,13 +46,13 @@ const faqs = [
     id: 7,
     question: "Do you help me find clients?",
     answer:
-      "Yes. The program includes career support such as resume review, outreach templates, interview preparation, and access to our exclusive job board featuring businesses actively seeking setters.",
+      "Yes. The program includes career support such as resume review, outreach templates, interview preparation, and access to our exclusive training and job board featuring businesses actively seeking setters.",
   },
   {
     id: 8,
     question: "What kind of support do I get after completing the program?",
     answer:
-      "You'll receive access to all course materials, ongoing community support through our private group, and continued access to our exclusive job board with hundreds of roles available over time. You're never left on your own.",
+      "You'll receive access to all course materials, ongoing community support through our private group, and continued access to our exclusive training and job board with hundreds of roles available over time. You're never left on your own.",
   },
 ];
 
