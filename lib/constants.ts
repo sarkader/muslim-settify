@@ -1,1 +1,1 @@
-export const TYPEFORM_URL = "https://form.typeform.com/to/ztBUiWgs?typeform-source=becomeasetter.info";
+export const TYPEFORM_URL = "https://form.typeform.com/to/ALT_LINK_1";
