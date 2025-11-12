@@ -55,7 +55,7 @@ const testimonials = [
     initials: "MA",
     color: "from-[#00D4AA] to-[#00B894]",
     summary: "Consistently stacking commissions across remote offers.",
-    earnings: "~$7k-$8k total collected",
+    earnings: "$6.8k earned",
     highlight: false,
   },
   {
