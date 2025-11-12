@@ -8,7 +8,8 @@ import {
   reduced,
 } from "@/components/ui/motion-presets";
 import { AnimatedButton } from "@/components/ui/animated-button";
-import { TYPEFORM_URL } from "@/lib/constants";
+
+const TYPEFORM_URL = "https://form.typeform.com/to/ztBUiWgs?typeform-source=becomeasetter.info";
 
 export function ApplyCTA() {
   const prefersReduced = useReducedMotion();

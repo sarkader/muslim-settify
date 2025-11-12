@@ -40,19 +40,13 @@ const faqs = [
     id: 6,
     question: "How long until I start earning?",
     answer:
-      "Many students land their first client within 4-8 weeks of completing the program, though timelines vary based on effort and consistency. Results vary.",
+      "We've seen students land their first client within the first week or within four weeks after onboarding, and others within four weeks. Timelines still depend on consistency and results vary.",
   },
   {
     id: 7,
     question: "Do you help me find clients?",
     answer:
       "Yes. The program includes appointment-setting career support such as outreach scripts, personalized feedback, interview preparation, and access to our exclusive training and job board featuring businesses actively seeking setters.",
-  },
-  {
-    id: 8,
-    question: "What kind of support do I get after completing the program?",
-    answer:
-      "You'll receive access to all course materials, ongoing community support through our private group, and continued access to our exclusive training and job board with thousands of roles available over time. You're never left on your own.",
   },
 ];
 

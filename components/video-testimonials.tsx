@@ -46,9 +46,9 @@ const videoTestimonials: VideoTestimonial[] = [
       "Feb 18 → Aqib met Jamil & purchased his coaching",
       "April 15 → Aqib has made 4 figures in earnings",
       "May 31 → Aqib got accepted into his biggest job yet",
-      "May 31 → Aqib did $12,000 in earnings(not fully collected) in May from all his remote sales revenue streams",
+      "May 31 → Aqib did $12,000 in earnings (not fully collected) in May from all his remote sales revenue streams",
       "June 14 → Aqib has done approximately $11,000 of sales for the new company he is working in remote sales for already",
-      "June 15 → Aqib's total earnings from the high-ticket sales space are at $24,000(not fully collected yet)",
+      "June 15 → Aqib's total earnings from the high-ticket sales space are at $24,000 (not fully collected yet)",
       "June 20 → Aqib started working as a setter for Muslimpreneur",
       "June 30 → Aqib has made around $30k (not fully collected)",
       "July 15 → Aqib made around $35k (not fully collected)",
@@ -76,7 +76,7 @@ const videoTestimonials: VideoTestimonial[] = [
       "September → Received paychecks in the thousands from both his offers",
       "October → Traveled while working freely to Turkey and met Jamil in the UAE",
     ],
-    result: "Earning thousands monthly + traveling freely",
+    result: "$3k-$4k OTE + traveling freely",
     highlight: false,
   },
   {
@@ -100,7 +100,7 @@ const videoTestimonials: VideoTestimonial[] = [
       "September → Gets paid a base salary and a commission on a $3k OTE role",
       "October → OTE is around $7k-$8k and became a COO",
     ],
-    result: "COO earning $7-8k/month",
+    result: "COO earning $7-8k OTE",
     highlight: false,
   },
   {
@@ -120,7 +120,7 @@ const videoTestimonials: VideoTestimonial[] = [
       "September → Collected his first paycheck from his new offer",
       "September 6 → About to settle in an apartment in Madinah soon, in shaa Allah",
     ],
-    result: "$5k-$8k OTE working remotely",
+    result: "Landed $5k-$8k OTE working remotely",
     highlight: false,
   },
   {
@@ -153,7 +153,7 @@ const videoTestimonials: VideoTestimonial[] = [
       "About 37 days after landing his role → Earned roughly $2.3k USD while balancing full-time work",
       "Now → Working two appointment-setting roles",
     ],
-    result: "Two setting roles • ~$2.3k earned in about 37 days",
+    result: "Two setting roles • ~$2k+ earned in about 37 days",
     highlight: false,
   },
   {
@@ -173,7 +173,7 @@ const videoTestimonials: VideoTestimonial[] = [
       "July 29 → Made almost $4k in total",
       "September 14 → Making good money while doing the things he likes",
     ],
-    result: "$4k+ Total Earned",
+    result: "$6.8k Total Earned",
     highlight: false,
   },
   {
@@ -198,7 +198,7 @@ const videoTestimonials: VideoTestimonial[] = [
     id: 9,
     name: "Shehab",
     headline: "Shehab's Story",
-    subheading: "March 30 → never worked in high ticket sales. Lives in Bangladesh.",
+    subheading: "",
     videoType: "loom" as const,
     videoId: "11c0981d645c478ebc2323cb01c8f308",
     timeline: [

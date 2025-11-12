@@ -9,7 +9,6 @@ import {
   reduced,
 } from "@/components/ui/motion-presets";
 import { AnimatedButton } from "@/components/ui/animated-button";
-import { TYPEFORM_URL } from "@/lib/constants";
 
 const benefits = [
   "Complete training program",
@@ -74,7 +73,7 @@ export function CTA() {
           </div>
 
           <AnimatedButton
-            href={TYPEFORM_URL}
+            href="https://form.typeform.com/to/ztBUiWgs?typeform-source=becomeasetter.info"
             className="w-full sm:w-auto text-sm md:text-lg px-6 py-3 md:px-12 md:py-6"
           >
             Apply Now

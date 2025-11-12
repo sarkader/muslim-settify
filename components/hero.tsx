@@ -11,7 +11,6 @@ import {
   reduced,
 } from "@/components/ui/motion-presets";
 import { AnimatedButton } from "@/components/ui/animated-button";
-import { TYPEFORM_URL } from "@/lib/constants";
 
 export function Hero() {
   const prefersReduced = useReducedMotion();
@@ -103,7 +102,7 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
           >
             <AnimatedButton
-              href={TYPEFORM_URL}
+              href="https://form.typeform.com/to/ztBUiWgs?typeform-source=becomeasetter.info"
               className="w-full sm:w-auto text-sm md:text-lg"
             >
               Apply Now

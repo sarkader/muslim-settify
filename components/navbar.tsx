@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { AnimatedButton } from "@/components/ui/animated-button";
-import { TYPEFORM_URL } from "@/lib/constants";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -91,7 +90,7 @@ export function Navbar() {
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex justify-end">
             <AnimatedButton
-              href={TYPEFORM_URL}
+              href="https://form.typeform.com/to/ztBUiWgs?typeform-source=becomeasetter.info"
               className="px-5 xl:px-6 py-2 xl:py-2.5 text-sm xl:text-base"
             >
               Apply Now
@@ -154,7 +153,7 @@ export function Navbar() {
             </Link>
             <div className="pt-4">
               <AnimatedButton
-                href={TYPEFORM_URL}
+                href="https://form.typeform.com/to/ztBUiWgs?typeform-source=becomeasetter.info"
                 className="w-full py-3 text-base"
               >
                 Apply Now
