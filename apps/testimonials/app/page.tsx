@@ -105,7 +105,9 @@ export default function Home() {
               <div className="inline-flex items-center gap-1 sm:gap-2 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] px-3 sm:px-6 py-2 sm:py-3 shadow-sm w-full sm:w-auto max-w-[2400px] justify-center text-center">
                 <span className="hidden sm:inline-block h-2 w-2 rounded-full bg-[#00D4AA] animate-pulse" aria-hidden />
                 <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold uppercase tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[#0066FF] to-[#00D4AA] whitespace-normal break-words">
-                   Go through the page and watch the videos as a member from our team reaches out to you in shaa Allah
+                   Go through the page and watch the videos as a member from our team reaches out to you
+                   <br />
+                   in shaa Allah
                  </span>
                </div>
              </div>
