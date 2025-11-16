@@ -102,13 +102,13 @@ export default function Home() {
             </div>
             {/* Helper line under videos */}
             <div className="mt-12 md:mt-16 mb-10 flex justify-center px-4">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] px-6 py-3 shadow-sm max-w-[2400px]">
-                <span className="h-2 w-2 rounded-full bg-[#00D4AA] animate-pulse" aria-hidden />
-                <span className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0066FF] to-[#00D4AA] whitespace-nowrap">
+              <div className="inline-flex items-center gap-1 sm:gap-2 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] px-3 sm:px-6 py-2 sm:py-3 shadow-sm w-full sm:w-auto max-w-[2400px] justify-center text-center">
+                <span className="hidden sm:inline-block h-2 w-2 rounded-full bg-[#00D4AA] animate-pulse" aria-hidden />
+                <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0066FF] to-[#00D4AA] whitespace-normal sm:whitespace-nowrap">
                    Go Through The Page And Watch The Videos As A Member From Our Team Reaches Out To You In Shaa Allah
                  </span>
-              </div>
-            </div>
+               </div>
+             </div>
             {/* subtle separator to balance with next section */}
             <div className="mx-auto mt-2 md:mt-4 mb-2 h-px w-full max-w-[1400px] bg-[#E2E8F0]" />
           </div>
