@@ -106,7 +106,7 @@ export default function Home() {
                 <span className="block text-sm sm:text-base md:text-lg lg:text-xl font-semibold uppercase tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[#0066FF] to-[#00D4AA] leading-snug">
                   Go through the page and watch the videos as a member from our team reaches out to you
                 </span>
-                <span className="block text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[#0066FF] to-[#00D4AA] mt-1">
+                <span className="block text-sm sm:text-base md:text-lg lg:text-xl font-semibold uppercase tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[#0066FF] to-[#00D4AA] mt-1 leading-snug">
                   In Shaa Allah
                 </span>
               </div>
