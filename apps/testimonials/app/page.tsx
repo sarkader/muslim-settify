@@ -40,19 +40,24 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Thank-you notice */}
+      <div className="bg-[#F8FAFC] border-b border-[#E2E8F0]">
+        <div className="container-custom py-2 text-center">
+          <p className="text-xs sm:text-sm text-[#6B7280]">
+            Thank you for applying. Please watch the training below — our team will reach out shortly.
+          </p>
+        </div>
+      </div>
+
       <main>
         {/* Section 1: Training */}
-        <section className="section-spacing bg-[#FFFFFF]">
-          <div className="container-custom">
+        <section className="bg-[#FFFFFF] pt-6 md:pt-8 pb-10 md:pb-14"><div className="container-custom">
             <h1 className="mb-3 md:mb-4 text-center text-[#1A202C] text-2xl sm:text-3xl md:text-4xl">
               Training video
             </h1>
-            <p className="mb-8 md:mb-12 text-center text-sm sm:text-base text-[#718096] px-4">
+            <p className="mb-6 md:mb-8 text-center text-sm sm:text-base text-[#718096] px-4">
               Watch these two short trainings to get the most from your
               onboarding. Bring any questions to our call.
-            </p>
-            <p className="mb-8 text-center text-sm sm:text-base font-semibold text-[#EF4444] px-4">
-              Go Through The Page And Watch The Videos As A Member From Our Team Reaches Out To You In Shaa Allah
             </p>
             <div className="grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-2 max-w-[2400px] mx-auto">
               {/* Left video with WATCH THIS FIRST badge */}
@@ -95,6 +100,17 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            {/* Helper line under videos */}
+            <div className="mt-12 md:mt-16 mb-10 flex justify-center px-4">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] px-6 py-3 shadow-sm max-w-[2400px]">
+                <span className="h-2 w-2 rounded-full bg-[#00D4AA] animate-pulse" aria-hidden />
+                <span className="text-base sm:text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#0066FF] to-[#00D4AA] whitespace-nowrap">
+                  Go Through The Page And Watch The Videos As A Member From Our Team Reaches Out To You In Shaa Allah
+                </span>
+              </div>
+            </div>
+            {/* subtle separator to balance with next section */}
+            <div className="mx-auto mt-2 md:mt-4 mb-2 h-px w-full max-w-[1400px] bg-[#E2E8F0]" />
           </div>
         </section>
 
