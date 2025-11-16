@@ -51,6 +51,9 @@ export default function Home() {
               Watch these two short trainings to get the most from your
               onboarding. Bring any questions to our call.
             </p>
+            <p className="mb-8 text-center text-sm sm:text-base font-semibold text-[#EF4444] px-4">
+              Go Through The Page And Watch The Videos As A Member From Our Team Reaches Out To You In Shaa Allah
+            </p>
             <div className="grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-2 max-w-[2400px] mx-auto">
               {/* Left video with WATCH THIS FIRST badge */}
               <div className="relative">
