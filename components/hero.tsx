@@ -47,7 +47,7 @@ export function Hero() {
             <span className="block whitespace-normal sm:whitespace-nowrap">
               Earn Up To{" "}
               <span className="bg-gradient-to-r from-[#0066FF] via-purple-600 to-[#00D4AA] bg-clip-text text-transparent font-extrabold animate-gradient whitespace-nowrap">
-                $2k-$15k Per Month
+                $2k-$10k Per Month
               </span>
             </span>
             <span className="block">Remotely</span>
