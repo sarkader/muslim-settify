@@ -80,8 +80,8 @@ export function LiteEmbed(props: LiteEmbedProps) {
       className={props.className ?? "w-full h-full"}
       title={title}
       loading={loading}
-      src={src}
-      // Keeps the initial embed lightweight; loads real player on tap.
+      // Keep the initial embed lightweight; load the real player on tap via srcDoc link.
+      src="about:blank"
       srcDoc={srcDoc}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen

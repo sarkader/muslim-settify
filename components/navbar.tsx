@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { AnimatedButton } from "@/components/ui/animated-button";
 import { TYPEFORM_URL } from "@/lib/constants";
-import { LogoMark } from "@/components/logo-mark";
+import logoMark from "@/public/settify-bg.png";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -48,7 +49,16 @@ export function Navbar() {
                 setMobileMenuOpen(false);
               }}
             >
-              <LogoMark className="h-7 w-7 md:h-9 md:w-9 select-none pointer-events-none" />
+              <Image
+                src={logoMark}
+                alt="Muslim Settify"
+                width={36}
+                height={36}
+                priority
+                fetchPriority="high"
+                sizes="(max-width: 768px) 28px, 36px"
+                className="h-7 w-7 md:h-9 md:w-9 select-none pointer-events-none"
+              />
               <span className="hidden md:inline text-lg font-bold tracking-tight text-[#1A202C]">
                 Muslim Settify
               </span>

@@ -1,14 +1,23 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { LogoMark } from "@/components/logo-mark";
+import logoMark from "@/public/settify-bg.png";
 
 export function Footer() {
   return (
     <footer className="bg-[#F3F6FB] text-[#1A202C] py-12 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-6 text-center">
         <Link href="/" aria-label="Go to home" className="flex items-center gap-2">
-          <LogoMark className="h-9 w-9" />
+          <Image
+            src={logoMark}
+            alt="Muslim Settify"
+            width={40}
+            height={40}
+            priority
+            fetchPriority="high"
+            className="h-9 w-9"
+          />
           <span className="text-lg font-semibold tracking-tight">
             Muslim Settify
           </span>
