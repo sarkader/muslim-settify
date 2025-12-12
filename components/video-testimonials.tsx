@@ -4,6 +4,18 @@ import { Zap, Coins } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
+import { LiteEmbed } from "@/components/ui/lite-embed";
+
+const LOOM_THUMBNAILS: Record<string, string> = {
+  "9351ea53e9d84356ba84aa2994a900bf":
+    "https://cdn.loom.com/sessions/thumbnails/9351ea53e9d84356ba84aa2994a900bf-9924fbb0b912d642.gif",
+  e26817a50f144028ae2b78754dc2bc30:
+    "https://cdn.loom.com/sessions/thumbnails/e26817a50f144028ae2b78754dc2bc30-c748d2a24d725b8e.gif",
+  fb861b6aa49b4e57a63db9ccf7a9c679:
+    "https://cdn.loom.com/sessions/thumbnails/fb861b6aa49b4e57a63db9ccf7a9c679-fb92d01f2b1e83f6.gif",
+  "11c0981d645c478ebc2323cb01c8f308":
+    "https://cdn.loom.com/sessions/thumbnails/11c0981d645c478ebc2323cb01c8f308-010afecad06a4fca.gif",
+};
 
 type BaseTestimonial = {
   id: number;
@@ -312,25 +324,22 @@ export function VideoTestimonials() {
               {/* VIDEO */}
               {testimonial.videoType === "youtube" && testimonial.videoId ? (
                 <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-md mb-3 md:mb-4">
-                  <iframe
-                    className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${testimonial.videoId}`}
+                  <LiteEmbed
+                    provider="youtube"
+                    id={testimonial.videoId}
                     title={testimonial.headline}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                    className="w-full h-full"
+                  />
                 </div>
               ) : testimonial.videoType === "loom" && testimonial.videoId ? (
                 <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-md mb-3 md:mb-4">
-                  <iframe
-                    className="w-full h-full"
-                    src={`https://www.loom.com/embed/${testimonial.videoId}`}
+                  <LiteEmbed
+                    provider="loom"
+                    id={testimonial.videoId}
+                    thumbnailUrl={LOOM_THUMBNAILS[testimonial.videoId]}
                     title={testimonial.headline}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                    className="w-full h-full"
+                  />
                 </div>
               ) : testimonial.videoType === "mp4" && testimonial.videoFile ? (
                 <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-md mb-4 bg-black">

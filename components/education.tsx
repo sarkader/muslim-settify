@@ -1,6 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { LiteEmbed } from "@/components/ui/lite-embed";
+
+const EDUCATION_LOOM_THUMBNAIL_URL =
+  "https://cdn.loom.com/sessions/thumbnails/b62017a7639543548f22b1b3e5f7392e-8968465559e11e72.gif";
 
 export function Education() {
   return (
@@ -47,13 +51,13 @@ export function Education() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
-            <iframe
-              src="https://www.loom.com/embed/b62017a7639543548f22b1b3e5f7392e"
-              frameBorder="0"
-              allowFullScreen
-              className="w-full h-full"
+            <LiteEmbed
+              provider="loom"
+              id="b62017a7639543548f22b1b3e5f7392e"
+              thumbnailUrl={EDUCATION_LOOM_THUMBNAIL_URL}
               title="What is Appointment Setting"
-            ></iframe>
+              className="w-full h-full"
+            />
           </div>
         </motion.div>
       </div>
