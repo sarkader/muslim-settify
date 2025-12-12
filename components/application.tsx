@@ -52,7 +52,7 @@ export function Application() {
         {/* SECTION HEADER */}
         <div className="text-center mb-12">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -61,7 +61,7 @@ export function Application() {
             Ready to Start Earning?
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
@@ -75,7 +75,7 @@ export function Application() {
         <div className="grid lg:grid-cols-[50%_50%] gap-8 lg:gap-12 items-start">
           {/* LEFT COLUMN - WHY APPLY */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -169,7 +169,7 @@ export function Application() {
 
           {/* RIGHT COLUMN - APPLICATION FORM */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}

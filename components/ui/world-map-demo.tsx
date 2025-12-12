@@ -16,7 +16,7 @@ export function WorldMapDemo() {
               <motion.span
                 key={idx}
                 className="inline-block mr-1 last:mr-0"
-                initial={{ x: -10, opacity: 0 }}
+                initial={{ x: 0, opacity: 1 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: idx * 0.04 }}
               >

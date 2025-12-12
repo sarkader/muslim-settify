@@ -114,7 +114,7 @@ export function Curriculum() {
         {/* SECTION HEADER */}
         <div className="text-center mb-14">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -123,7 +123,7 @@ export function Curriculum() {
             Complete 8-Week Training System
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
@@ -139,7 +139,7 @@ export function Curriculum() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={{
-            hidden: { opacity: 0 },
+            hidden: { opacity: 1 },
             visible: {
               opacity: 1,
               transition: {
@@ -151,7 +151,7 @@ export function Curriculum() {
         >
           <motion.h3
             variants={{
-              hidden: { opacity: 0, y: 30 },
+              hidden: { opacity: 1, y: 0 },
               visible: {
                 opacity: 1,
                 y: 0,
@@ -170,7 +170,7 @@ export function Curriculum() {
               <motion.div
                 key={index}
                 variants={{
-                  hidden: { opacity: 0, y: 30 },
+                  hidden: { opacity: 1, y: 0 },
                   visible: {
                     opacity: 1,
                     y: 0,
@@ -208,7 +208,7 @@ export function Curriculum() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={{
-            hidden: { opacity: 0 },
+            hidden: { opacity: 1 },
             visible: {
               opacity: 1,
               transition: {
@@ -220,7 +220,7 @@ export function Curriculum() {
         >
           <motion.h3
             variants={{
-              hidden: { opacity: 0, y: 30 },
+              hidden: { opacity: 1, y: 0 },
               visible: {
                 opacity: 1,
                 y: 0,
@@ -241,7 +241,7 @@ export function Curriculum() {
                 <motion.div
                   key={index}
                   variants={{
-                    hidden: { opacity: 0, y: 30 },
+                    hidden: { opacity: 1, y: 0 },
                     visible: {
                       opacity: 1,
                       y: 0,
@@ -272,7 +272,7 @@ export function Curriculum() {
 
         {/* CALL-OUT BOX */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}

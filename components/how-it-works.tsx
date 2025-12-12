@@ -36,7 +36,7 @@ export function HowItWorks() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -45,7 +45,7 @@ export function HowItWorks() {
             How It Works
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
@@ -60,7 +60,7 @@ export function HowItWorks() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={{
-            hidden: { opacity: 0 },
+            hidden: { opacity: 1 },
             visible: {
               opacity: 1,
               transition: {
@@ -76,7 +76,7 @@ export function HowItWorks() {
               <motion.div
                 key={step.number}
                 variants={{
-                  hidden: { opacity: 0, y: 30 },
+                  hidden: { opacity: 1, y: 0 },
                   visible: {
                     opacity: 1,
                     y: 0,
