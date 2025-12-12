@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useMemo, useRef } from "react";
 import { motion } from "framer-motion";
 import DottedMap from "dotted-map";
 import Image from "next/image";
@@ -19,16 +19,19 @@ export function WorldMap({
   lineColor = "#0ea5e9",
 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
-  const map = new DottedMap({ height: 100, grid: "diagonal" });
 
   const { theme } = useTheme();
 
-  const svgMap = map.getSVG({
-    radius: 0.22,
-    color: theme === "dark" ? "#FFFFFF40" : "#00000040",
-    shape: "circle",
-    backgroundColor: theme === "dark" ? "black" : "white",
-  });
+  const svgMapDataUri = useMemo(() => {
+    const map = new DottedMap({ height: 100, grid: "diagonal" });
+    const svg = map.getSVG({
+      radius: 0.22,
+      color: theme === "dark" ? "#FFFFFF40" : "#00000040",
+      shape: "circle",
+      backgroundColor: theme === "dark" ? "black" : "white",
+    });
+    return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+  }, [theme]);
 
   const projectPoint = (lat: number, lng: number) => {
     const x = (lng + 180) * (800 / 360);
@@ -48,11 +51,13 @@ export function WorldMap({
   return (
     <div className="w-full aspect-[2/1] dark:bg-black bg-white rounded-lg relative font-sans">
       <Image
-        src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
+        src={svgMapDataUri}
         className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
         alt="world map"
         height={495}
         width={1056}
+        sizes="100vw"
+        loading="eager"
         draggable={false}
       />
       <svg
