@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import logoMark from "@/public/settify-bg.png";
 
 export function Footer() {
   return (
@@ -10,12 +9,13 @@ export function Footer() {
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-6 text-center">
         <Link href="/" aria-label="Go to home" className="flex items-center gap-2">
           <Image
-            src={logoMark}
+            src="/settify-bg.png"
             alt="Muslim Settify"
             width={40}
             height={40}
             priority
             fetchPriority="high"
+            unoptimized
             className="h-9 w-9"
           />
           <span className="text-lg font-semibold tracking-tight">
