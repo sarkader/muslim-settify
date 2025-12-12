@@ -1,21 +1,14 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { LogoMark } from "@/components/logo-mark";
 
 export function Footer() {
   return (
     <footer className="bg-[#F3F6FB] text-[#1A202C] py-12 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-6 text-center">
         <Link href="/" aria-label="Go to home" className="flex items-center gap-2">
-          <Image
-            src="/settify-bg.png"
-            alt="Muslim Settify"
-            width={40}
-            height={40}
-            className="h-9 w-9"
-            priority
-          />
+          <LogoMark className="h-9 w-9" />
           <span className="text-lg font-semibold tracking-tight">
             Muslim Settify
           </span>
