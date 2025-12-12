@@ -15,7 +15,7 @@ type Logo = {
   image: string;
 };
 
-const logos: Logo[] = [
+export const CASE_LOGOS: Logo[] = [
   { name: "Z Circle", image: "/icon/trial.png" },
   { name: "B38 36", image: "/icon/b38.36.png" },
   { name: "B37 59", image: "/icon/b37.59.png" },
@@ -37,7 +37,7 @@ const CYCLE_DELAY = 2000;
 
 export function Case() {
   const [api, setApi] = useState<CarouselApi>();
-  const slides = useMemo(() => logos.concat(logos.slice(0, 6)), []);
+  const slides = useMemo(() => CASE_LOGOS.concat(CASE_LOGOS.slice(0, 6)), []);
 
   useEffect(() => {
     if (!api) {
@@ -85,6 +85,7 @@ export function Case() {
                       alt={logo.name}
                       width={160}
                       height={160}
+                      sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 16vw"
                       className="h-full w-full object-cover"
                     />
                   </div>

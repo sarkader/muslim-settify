@@ -8,12 +8,14 @@ import { ApplyCTA } from "@/components/apply-cta";
 import { Footer } from "@/components/footer";
 import { WorldMapSection } from "@/components/world-map-section";
 import { Case } from "@/components/ui/cases-with-infinite-scroll";
+import { PrefetchBelowFold } from "@/components/prefetch-below-fold";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <PrefetchBelowFold />
       <VideoTestimonials />
       <Case />
       <CombinedOverview />

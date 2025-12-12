@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { LiteEmbed } from "@/components/ui/lite-embed";
 
-const LOOM_THUMBNAILS: Record<string, string> = {
+export const LOOM_THUMBNAILS: Record<string, string> = {
   "9351ea53e9d84356ba84aa2994a900bf":
     "https://cdn.loom.com/sessions/thumbnails/9351ea53e9d84356ba84aa2994a900bf-9924fbb0b912d642.gif",
   e26817a50f144028ae2b78754dc2bc30:
@@ -16,6 +16,14 @@ const LOOM_THUMBNAILS: Record<string, string> = {
   "11c0981d645c478ebc2323cb01c8f308":
     "https://cdn.loom.com/sessions/thumbnails/11c0981d645c478ebc2323cb01c8f308-010afecad06a4fca.gif",
 };
+
+export const YOUTUBE_VIDEO_IDS: string[] = [
+  "tE-AMxW_p7I",
+  "OT-JjZCzfq8",
+  "FAbzaf_OO28",
+  "KSwLMwW7S0E",
+  "0yU5bezEcxc",
+];
 
 type BaseTestimonial = {
   id: number;
