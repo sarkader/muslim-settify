@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/motion-presets";
 import { AnimatedButton } from "@/components/ui/animated-button";
 import { LiteEmbed } from "@/components/ui/lite-embed";
-import { TYPEFORM_URL } from "@/lib/constants";
 
 const HERO_LOOM_THUMBNAIL_URL =
   "https://cdn.loom.com/sessions/thumbnails/b62017a7639543548f22b1b3e5f7392e-8968465559e11e72.gif";
@@ -111,7 +110,7 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
           >
             <AnimatedButton
-              href={TYPEFORM_URL}
+              href="/apply"
               className="w-full sm:w-auto text-sm md:text-lg"
             >
               Apply Now

@@ -8,7 +8,6 @@ import {
   reduced,
 } from "@/components/ui/motion-presets";
 import { AnimatedButton } from "@/components/ui/animated-button";
-import { TYPEFORM_URL } from "@/lib/constants";
 
 export function ApplyCTA() {
   const prefersReduced = useReducedMotion();
@@ -45,7 +44,7 @@ export function ApplyCTA() {
           viewport={{ once: true, amount: 0.25 }}
         >
           <AnimatedButton
-            href={TYPEFORM_URL}
+            href="/apply"
             className="text-sm md:text-lg md:px-[60px]"
           >
             Apply Now

@@ -2,6 +2,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### Environment variables
+
+- **`TYPEFORM_URL`**: fallback Typeform URL for other hosts
+
+Notes:
+- For `muslimsettify.com`, `/apply` is hard-locked to `[https://form.typeform.com/to/ztBUiWgs](https://form.typeform.com/to/ztBUiWgs)` to prevent misrouting.
+- For `settifyowtp*`, `/apply` redirects to `[https://form.typeform.com/to/jR36nOwS](https://form.typeform.com/to/jR36nOwS)`.
+- For `settifyhaqqan*`, `/apply` redirects to `[https://form.typeform.com/to/t5UXUG8L](https://form.typeform.com/to/t5UXUG8L)`.
+- If the host doesn’t match any known site and `TYPEFORM_URL` isn’t set, `/apply` will **not redirect** (to avoid sending leads to the wrong form) and will instead display a configuration error.
+
 First, run the development server:
 
 ```bash
